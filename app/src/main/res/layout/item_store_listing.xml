@@ -3,6 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+
+        <variable
+            name="restaurant"
+            type="com.tmdone.tmdonesdk.app.uimodels.Store" />
+    </data>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -91,6 +98,7 @@
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
+                                    app:restaurantLogo="@{restaurant.logoUrl}"
                                     tools:src="@drawable/image_tmdone_logo_round" />
 
                             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -177,6 +185,7 @@
                                         android:layout_height="wrap_content"
                                         android:ellipsize="end"
                                         android:maxLines="1"
+                                        android:text="@{restaurant.name}"
                                         android:textAlignment="viewStart"
                                         tools:text="Al-Mas Indian Restaurant AlmAl-Mas In" />
 

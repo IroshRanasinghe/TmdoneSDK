@@ -164,7 +164,8 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolderSt
 
         public void bind(Store store) {
             mBinding.constraintLayout1.setBackgroundColor(Color.WHITE);
-            loadRestaurantLogo(store.getLogoUrl());
+            mBinding.setRestaurant(store);
+//            loadRestaurantLogo(store.getLogoUrl());
             switchViewChange(mIsDetailView);
             makeFavouriteBatchVisible(store);
             checkRestaurantStatus(store);

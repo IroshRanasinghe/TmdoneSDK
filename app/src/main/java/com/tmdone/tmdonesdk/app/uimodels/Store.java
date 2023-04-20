@@ -2,16 +2,31 @@ package com.tmdone.tmdonesdk.app.uimodels;
 
 import static com.tmdone.tmdonesdk.core.Constants.CONST_IS_USER_LANGUAGE_AR;
 
+import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.RoundedBitmapDrawable;
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory;
+import androidx.databinding.BindingAdapter;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.tmdone.tmdonesdk.R;
 import com.tmdone.tmdonesdk.app.utility.ExtenstionMethods;
 
 import java.util.List;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 /**
  * @Author: Iroshana Ranasinghe
@@ -243,55 +258,55 @@ public class Store implements Parcelable{
         this.orderType = orderType;
     }
 
-//    @BindingAdapter({"storeCover"})
-//    public static void loadStoreCover(ImageView imageView, String coverUrl) {
-//        Glide.with(imageView.getContext())
-//                .load(coverUrl)
-//                .placeholder(R.drawable.default_cover)
-//                .override(400, 300).into(imageView);
-//    }
+    @BindingAdapter({"storeCover"})
+    public static void loadStoreCover(ImageView imageView, String coverUrl) {
+        Glide.with(imageView.getContext())
+                .load(coverUrl)
+                .placeholder(R.drawable.default_cover)
+                .override(400, 300).into(imageView);
+    }
 
-//    @BindingAdapter({"restaurantLogo"})
-//    public static void loadRestaurantLogo(CircleImageView imageView, String logoUrl) {
-//        Context context = imageView.getContext();
-//        Resources resources = context.getResources();
-//        Drawable defaultImage = ContextCompat.getDrawable(context, R.drawable.image_tmdone_logo_round);
-//        try {
-//            Glide.with(context)
-//                    .load(logoUrl)
-//                    .asBitmap()
-//                    .error(defaultImage)
-//                    .placeholder(defaultImage)
-//                    .into(new BitmapImageViewTarget(imageView) {
-//                        @Override
-//                        protected void setResource(Bitmap bitmap) {
-//                            if (!bitmap.isRecycled()) {
-//                                RoundedBitmapDrawable circularBitmapDrawable =
-//                                        RoundedBitmapDrawableFactory.create(resources, bitmap);
-//                                circularBitmapDrawable.setCircular(true);
-//                                imageView.setImageDrawable(circularBitmapDrawable);
-//                            } else {
-//                                // The bitmap is recycled, so we need to load it again before displaying it
-//                                loadRestaurantLogo(imageView, logoUrl);
-//                            }
-//                        }
-//                    });
-//        } catch (Exception e) {
-//            if (e.getMessage() != null && e.getMessage().contains("Canvas: trying to use a recycled bitmap")) {
-//                loadRestaurantLogo(imageView, logoUrl);
-//            } else {
-//                Log.e("StoreObject", "Error loading restaurant logo", e);
-//            }
-//        }
-//    }
+    @BindingAdapter({"restaurantLogo"})
+    public static void loadRestaurantLogo(CircleImageView imageView, String logoUrl) {
+        Context context = imageView.getContext();
+        Resources resources = context.getResources();
+        Drawable defaultImage = ContextCompat.getDrawable(context, R.drawable.image_tmdone_logo_round);
+        try {
+            Glide.with(context)
+                    .asBitmap()
+                    .load(logoUrl)
+                    .error(defaultImage)
+                    .placeholder(defaultImage)
+                    .into(new BitmapImageViewTarget(imageView) {
+                        @Override
+                        protected void setResource(Bitmap bitmap) {
+                            if (!bitmap.isRecycled()) {
+                                RoundedBitmapDrawable circularBitmapDrawable =
+                                        RoundedBitmapDrawableFactory.create(resources, bitmap);
+                                circularBitmapDrawable.setCircular(true);
+                                imageView.setImageDrawable(circularBitmapDrawable);
+                            } else {
+                                // The bitmap is recycled, so we need to load it again before displaying it
+                                loadRestaurantLogo(imageView, logoUrl);
+                            }
+                        }
+                    });
+        } catch (Exception e) {
+            if (e.getMessage() != null && e.getMessage().contains("Canvas: trying to use a recycled bitmap")) {
+                loadRestaurantLogo(imageView, logoUrl);
+            } else {
+                Log.e("StoreObject", "Error loading restaurant logo", e);
+            }
+        }
+    }
 
-//    @BindingAdapter({"squareRestaurantLogo"})
-//    public static void LoadSquareRestaurantLogo(ImageView imageView, String logoUrl) {
-//        Glide.with(imageView.getContext())
-//                .load(logoUrl)
-//                .placeholder(R.drawable.ic_grocery_placeholder)
-//                .into(imageView);
-//    }
+    @BindingAdapter({"squareRestaurantLogo"})
+    public static void LoadSquareRestaurantLogo(ImageView imageView, String logoUrl) {
+        Glide.with(imageView.getContext())
+                .load(logoUrl)
+                .placeholder(R.drawable.ic_grocery_placeholder)
+                .into(imageView);
+    }
 
     public String getId() {
         return id;

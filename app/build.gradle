@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.tmdone.tmdonesdk'
-    compileSdk 31
+    compileSdk 33
 
     defaultConfig {
 //        applicationId "com.tmdone.tmdonesdk"
         minSdk 24
-        targetSdk 31
+        targetSdk 33
         versionCode rootProject.ext.appVersionCode
         versionName "${rootProject.ext.appVersionName}"
 
