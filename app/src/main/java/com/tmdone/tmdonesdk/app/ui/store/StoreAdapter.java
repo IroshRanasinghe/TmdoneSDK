@@ -184,27 +184,32 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolderSt
             Drawable defaultImage = ContextCompat.getDrawable(itemView.getContext(), R.drawable.image_tmdone_logo_round);
             try {
                 Glide.with(itemView.getContext())
-                        .load(logoUrl)
                         .asBitmap()
+                        .load(logoUrl)
                         .error(defaultImage)
                         .placeholder(defaultImage)
                         .into(new BitmapImageViewTarget(mBinding.imageRestaurantLogo) {
                             @Override
                             protected void setResource(Bitmap bitmap) {
-                                if (!bitmap.isRecycled()) {
-                                    RoundedBitmapDrawable circularBitmapDrawable =
-                                            RoundedBitmapDrawableFactory.create(resources, bitmap);
-                                    circularBitmapDrawable.setCircular(true);
-                                    mBinding.imageRestaurantLogo.setImageDrawable(circularBitmapDrawable);
-                                } else {
-                                    // The bitmap is recycled, so we need to load it again before displaying it
-                                    loadRestaurantLogo( logoUrl);
+                                if (bitmap != null) {
+                                    if (!bitmap.isRecycled()) {
+                                        RoundedBitmapDrawable circularBitmapDrawable =
+                                                RoundedBitmapDrawableFactory.create(resources, bitmap);
+                                        circularBitmapDrawable.setCircular(true);
+                                        mBinding.imageRestaurantLogo.setImageDrawable(circularBitmapDrawable);
+                                    } else {
+                                        // The bitmap is recycled, so we need to load it again before displaying it
+                                        loadRestaurantLogo(logoUrl);
+                                    }
+                                }else {
+                                    loadRestaurantLogo(logoUrl);
                                 }
+
                             }
                         });
             } catch (Exception e) {
                 if (e.getMessage() != null && e.getMessage().contains("Canvas: trying to use a recycled bitmap")) {
-                    loadRestaurantLogo( logoUrl);
+                    loadRestaurantLogo(logoUrl);
                 } else {
                     Log.e("StoreObject", "Error loading restaurant logo", e);
                 }
