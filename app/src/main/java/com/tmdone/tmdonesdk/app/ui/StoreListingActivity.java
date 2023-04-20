@@ -7,7 +7,6 @@ import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,7 +23,7 @@ import com.tmdone.tmdonesdk.network.viewmodel.StoreViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class StoreListingActivity extends AppCompatActivity {
 
     private ActivityStoreListingBinding mBinding;
     StoreViewModel mRestaurantViewModel;
