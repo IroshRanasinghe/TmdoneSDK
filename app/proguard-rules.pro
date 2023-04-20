@@ -19,3 +19,8 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep public class com.tmdone.tmdonesdk.app.ui.StoreListingActivity
+-keepclassmembers class com.tmdone.tmdonesdk.app.ui.StoreListingActivity {
+ void onCreate(android.os.Bundle);
+}
