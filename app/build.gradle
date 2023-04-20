@@ -1,5 +1,6 @@
 plugins {
     id 'com.android.library'
+    id 'maven-publish'
 }
 
 android {
@@ -82,4 +83,17 @@ dependencies {
     // shimmer layout
     implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
 
+}
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.IroshRanasinghe'
+                artifactId = 'TmdoneSDK'
+                version = '1.0'
+            }
+        }
+    }
 }
