@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/image_cover"
+                        android:layout_width="0dp"
+                        android:layout_height="170dp"
+                        android:scaleType="fitCenter"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/image_batch_detail_view"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_featured_flag"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/image_cover">
+
+
+                        <RelativeLayout
+                            android:id="@+id/relative_circular_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="24dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="24dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/image_restaurant_logo"
+                                    android:layout_width="72dp"
+                                    android:layout_height="72dp"
+                                    android:scaleType="centerCrop"
+                                    app:civ_border_color="@color/colorDoveGray"
+                                    app:civ_border_width="0.5dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:src="@drawable/image_tmdone_logo_round" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </RelativeLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraintLayout4"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="4dp"
+                            app:layout_constraintBottom_toBottomOf="@id/relative_circular_image"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/relative_circular_image"
+                            app:layout_constraintTop_toTopOf="@id/relative_circular_image">
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/constraint_new_batch"
+                                    android:layout_width="36dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="4dp"
+                                    android:background="@drawable/bg_round_corner_solid_color_sun"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="@+id/text_restaurant_name"
+                                    app:layout_constraintEnd_toStartOf="@+id/image_favourite"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/linearLayout1"
+                                    app:layout_constraintTop_toTopOf="@+id/text_restaurant_name">
+
+                                    <TextView
+                                        style="@style/ProximaNovaRegularTextColorWhite.size12"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/label_new"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                <ImageView
+                                    android:id="@+id/image_favourite"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="4dp"
+                                    android:paddingStart="2dp"
+                                    android:paddingTop="4dp"
+                                    android:paddingEnd="2dp"
+                                    android:paddingBottom="4dp"
+                                    android:src="@drawable/ic_favourite"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="@+id/text_restaurant_name"
+                                    app:layout_constraintEnd_toStartOf="@+id/text_restaurant_name"
+                                    app:layout_constraintHorizontal_bias="0.5"
+                                    app:layout_constraintStart_toEndOf="@+id/image_new_batch"
+                                    app:layout_constraintTop_toTopOf="@+id/text_restaurant_name" />
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="24dp"
+                                    android:layout_weight="1">
+
+                                    <TextView
+                                        android:id="@+id/text_restaurant_name"
+                                        style="@style/ProximaNovaBoldTextColorBlack.size16"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:maxLines="1"
+                                        android:textAlignment="viewStart"
+                                        tools:text="Al-Mas Indian Restaurant AlmAl-Mas In" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/text_cuisine"
+                                style="@style/ProximaNovaRegularTextColorGray.size14"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:maxLines="1"
+                                android:text="@string/fetching"
+                                android:textAlignment="viewStart"
+                                android:visibility="visible"
+                                app:layout_constraintEnd_toEndOf="@id/linearLayout2"
+                                app:layout_constraintStart_toStartOf="@id/linearLayout2"
+                                app:layout_constraintTop_toBottomOf="@id/linearLayout2"
+                                tools:text="Indian, Vegetarian, Desserts" />
+
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginTop="4dp"
+                                android:src="@drawable/ic_start_orange"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@id/text_cuisine" />
+
+                            <TextView
+                                android:id="@+id/text_rating"
+                                style="@style/ProximaNovaRegularTextColorBlack.size12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:text="0.0"
+                                android:textAlignment="viewStart"
+                                app:layout_constraintBottom_toBottomOf="@id/imageView1"
+                                app:layout_constraintStart_toEndOf="@id/imageView1"
+                                app:layout_constraintTop_toTopOf="@id/imageView1" />
+
+                            <TextView
+                                android:id="@+id/text_rating_count"
+                                style="@style/ProximaNovaRegularTextColorGray.size12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@id/text_rating"
+                                app:layout_constraintStart_toEndOf="@id/text_rating"
+                                app:layout_constraintTop_toTopOf="@id/text_rating"
+                                tools:text="(112)" />
+
+                            <TextView
+                                android:id="@+id/text_off"
+                                style="@style/ProximaNovaRegularTextColorLipstick.size12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:text="@string/fetching"
+                                android:visibility="gone"
+                                app:layout_constraintBottom_toBottomOf="@+id/text_rating_count"
+                                app:layout_constraintStart_toEndOf="@id/text_rating_count"
+                                app:layout_constraintTop_toTopOf="@+id/text_rating_count"
+                                tools:text="30 %OFF" />
+
+                            <ImageView
+                                android:id="@+id/image_market_place"
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="4dp"
+                                android:src="@drawable/ic_thunder_bg_orange"
+                                android:visibility="visible"
+                                app:layout_constraintEnd_toStartOf="@+id/text_delivery_time"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintHorizontal_chainStyle="packed"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/text_delivery_time" />
+
+                            <TextView
+                                android:id="@+id/text_delivery_time"
+                                style="@style/ProximaNovaRegularTextColorGray.size12"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:ems="1"
+                                android:text="@string/fetching"
+                                android:textAlignment="viewStart"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                                app:layout_constraintStart_toStartOf="@+id/text_rating"
+                                app:layout_constraintTop_toBottomOf="@+id/text_rating"
+                                tools:text="20-30 Mins | Delivery Fee: 0.500 | Min: 2.000" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_status_container"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/colorTranslucent"
+                    android:foregroundGravity="bottom"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/text_status"
+                        style="@style/ProximaNovaBoldTextColorWhite.size18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/label_busy"
+                        android:textSize="20sp" />
+                </FrameLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/image_batch"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_featured_flag"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TM Done SDK</string>
+    <string name="msg_something_went_wrong">Oops, Something Went Wrong..Please Try Again!</string>
+    <string name="msg_network_not_available">To use our app, you need to be connected to the internet.</string>
+    <string name="label_new">NEW</string>
+    <string name="fetching">Fetching</string>
+    <string name="label_busy">Busy</string>
+    <string name="message_no_result">No Results</string>
+    <string name="label_mins">mins</string>
+    <string name="label_not_available">Not Available</string>
+    <string name="label_distance_km">KM</string>
+    <string name="label_delivery_fee">Delivery Fee :</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="label_free">FREE</string>
+    <string name="label_closed">Closed</string>
+    <string name="label_distance">Distance</string>
+</resources>

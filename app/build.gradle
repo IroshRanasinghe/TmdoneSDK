@@ -1,0 +1,85 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.tmdone.tmdonesdk'
+    compileSdk 31
+
+    defaultConfig {
+//        applicationId "com.tmdone.tmdonesdk"
+        minSdk 24
+        targetSdk 31
+        versionCode rootProject.ext.appVersionCode
+        versionName "${rootProject.ext.appVersionName}"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            buildConfigField 'String', 'API_HOST', "\"api.tmdone.com\""
+            buildConfigField 'String', 'API_URL', "\"https://api.tmdone.com\""
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+
+        debug {
+            buildConfigField 'String', 'API_HOST', "\"demoapi.tmdone.com\""
+            buildConfigField 'String', 'API_URL', "\"https://demoapi.tmdone.com\""
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        dataBinding = true
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+
+    //Retrofit CURL Interceptor
+    implementation("com.squareup.okhttp3:logging-interceptor:4.9.3")
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.1'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+
+    //Glide Library
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+
+    //circle imageview
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    // shimmer layout
+    implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
+
+}

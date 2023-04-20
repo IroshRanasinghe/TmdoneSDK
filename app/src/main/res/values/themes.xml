@@ -1,0 +1,1404 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetDialogStyle</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="BottomSheetDialogStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_solid_white_top_two_corner_rounded</item>
+        <item name="android:fillViewport">true</item>
+        <!--        <item name="behavior_peekHeight">@dimen/custom_peek_height</item>-->
+    </style>
+
+    <style name="switchStyle" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="height">30dp</item>
+        <item name="colorAccent">@color/colorPrimary</item>    <!-- set your color -->
+    </style>
+
+    <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <!--    Change dialog width to a percentage of screen-->
+    <style name="AdjustDialogWidthTheme" parent="android:Theme.Holo.Dialog">
+        <item name="windowFixedWidthMajor">95%</item>
+        <item name="windowFixedWidthMinor">95%</item>
+    </style>
+
+    <style name="ThemeDialogFragment" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:windowMinWidthMajor">95%</item>
+        <item name="android:windowMinWidthMinor">95%</item>
+    </style>
+
+    <!--    NEW STYLES  OF NEW UI-->
+
+    <!--==========================START PROXIMA BOLD BLACK==================-->
+    <style name="ProximaNovaBoldTextColorBlack">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size10">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorBlack.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size19">
+        <item name="android:textSize">19sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size22">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size26">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size29">
+        <item name="android:textSize">29sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size30">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack.size34">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <!--==========================START PROXIMA SEMI BOLD BLACK==================-->
+    <style name="ProximaNovaSemiBoldTextColorBlack">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorBlack.size17">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorBlack.size13">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorBlack.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorBlack.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorBlack.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorBlack.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorBlack.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--==========================START PROXIMA SEMI BOLD ORANGE PEEL==================-->
+    <style name="ProximaNovaSemiBoldTextColorOrangePeel">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorOrangePeel</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorOrangePeel.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorOrangePeel.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <!--==========================START PROXIMA BOLD SILVER==================-->
+    <style name="ProximaNovaBoldTextColorSilver">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorSilver</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSilver.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--==========================START PROXIMA BOLD Silver Chalice==================-->
+
+    <style name="ProximaNovaBoldTextColorSilverChalice">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorSilverChalice</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSilverChalice.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--==========================START PROXIMA BOLD BOULDER==================-->
+
+    <style name="ProximaNovaBoldTextColorBoulder">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorBoulder</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBoulder.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSilver.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <!--==========================START PROXIMA BOLD Red Violet==================-->
+    <style name="ProximaNovaBoldTextColorRedViolet">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorRedViolet</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorRedViolet.size13">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorRedViolet.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorRedViolet.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--==========================START PROXIMA REGULAR Dove Gray==================-->
+    <style name="ProximaNovaRegularTextColorDoveGray">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorDoveGray</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDoveGray.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDoveGray.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDoveGray.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDoveGray.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDoveGray.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDoveGray.size17">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <!--==========================START PROXIMA SEMI Bold Dove Gray==================-->
+    <style name="ProximaNovaSemiBoldTextColorDoveGray">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorDoveGray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorDoveGray.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorDoveGray.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorDoveGray.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorDoveGray.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <!--==========================START PROXIMA BOLD Dove Gray==================-->
+    <style name="ProximaNovaBoldTextColorDoveGray">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorDoveGray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorDoveGray.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorDoveGray.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorDoveGray.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorDoveGray.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <!--==========================START PROXIMA BOLD WHITE==================-->
+    <style name="ProximaNovaBoldTextColorWhite">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size17">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size26">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size30">
+        <item name="android:textSize">30sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size32">
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size6">
+        <item name="android:textSize">6sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite.size48">
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <!--==========================END PROXIMA BOLD WHITE==================-->
+
+    <!--==========================START PROXIMA BOLD RED==================-->
+
+    <style name="ProximaNovaBoldTextColorRed">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorRed</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorRed.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorRed.size10">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorRed.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--==========================END PROXIMA BOLD RED==================-->
+
+
+    <!--==========================START PROXIMA BOLD MINSK==================-->
+    <style name="ProximaNovaBoldTextColorMinsk">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorMinsk</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size17">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size21">
+        <item name="android:textSize">21sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size24">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size26">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size29">
+        <item name="android:textSize">29sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size34">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size40">
+        <item name="android:textSize">40sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk.size10">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--==========================END PROXIMA REGULAR MINSK==================-->
+
+
+    <style name="ProximaNovaRegularTextColorMinsk">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorMinsk</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMinsk.size14">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMinsk.size15">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMinsk.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMinsk.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMinsk.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMinsk.size10">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--==========================END PROXIMA SEMI BOLD MINSK==================-->
+
+
+    <style name="ProximaNovaSemiBoldTextColorMinsk">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorMinsk</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorMinsk.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorMinsk.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--==========================START PROXIMA REGULAR RED==================-->
+
+    <style name="ProximaNovaRegularTextColorRed">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorRed</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorRed.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--==========================END PROXIMA REGULAR RED==================-->
+
+
+    <!--==========================START PROXIMA REGULAR BLACK==================-->
+
+    <style name="ProximaNovaRegularTextColorBlack">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size10">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size13">
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size17">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack.size26">
+        <item name="android:textSize">26sp</item>
+    </style>
+
+
+    <!--==========================START PROXIMA REGULAR Mine Shaft==================-->
+
+    <style name="ProximaNovaRegularTextColorMineShaft">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorMineShaft</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMineShaft.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMineShaft.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!--==========================END PROXIMA REGULAR BLACK==================-->
+
+
+    <!--==========================START PROXIMA REGULAR WHITE==================-->
+
+    <style name="ProximaNovaRegularTextColorWhite">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite.size10">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite.size6">
+        <item name="android:textSize">6sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <!--==========================START PROXIMA REGULAR ASH==================-->
+
+    <style name="ProximaNovaRegularTextColorAsh">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularTextColorAsh.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorAsh.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorAsh.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularTextColorAsh.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorAsh.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorAsh.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--==========================START PROXIMA REGULAR RedViole==================-->
+
+
+    <style name="ProximaNovaRegularTextColorRedViolet">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorRedViolet</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorRedViolet.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularTextColorGigas">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorGigas</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGigas.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGigas.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorGigas">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorGigas</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGigas.size16">
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGigas.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularTextColorGray">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGray.size10">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGray.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGray.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGray.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGray.size17">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGray.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGray.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorGray">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorGray</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGray.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGray.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGray.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorGray.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGray.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGray.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSun">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorSun</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSun.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSun.size10">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--==========================START SEMI BOLD Color Gray==================-->
+
+    <style name="ProximaNovaSemiBoldTextColorGray">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProximaNovaSemiBoldTextColorGray.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorLipstick">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorLipstick</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorLipstick.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorLipstick.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorLipstick.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorLipstick.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorLipstick">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorLipstick</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorLipstick.size10">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorLipstick.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorLipstick.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorLipstick.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilver">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorSilverChalice</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilver.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilver.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilver.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilver.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilver.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilver.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSun">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorSun</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSun.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSun.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorSun.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSun.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularxtcolorMineShaft">
+        <item name="fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorMineShaft</item>
+    </style>
+
+    <style name="ProximaNovaRegularxtcolorMineShaft.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGlacier">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorGlacier</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGlacier.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorTundora">
+        <item name="fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorTundora</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorTundora.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorTundora.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorTundora.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorMineShaft">
+        <item name="fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorMineShaft</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMineShaft.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMineShaft.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMineShaft.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+
+    <style name="ProximaNovaRegularTextColorDustyGray">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorDustyGray</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDustyGray.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDustyGray.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorColorCornflowerBlue">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorCornflowerBlue</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorColorCornflowerBlue">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorCornflowerBlue</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorColorCornflowerBlue.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorColorCornflowerBlue.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorColorCornflowerBlue.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSearBuckThron">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorSeaBuckthorn</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSearBuckThron.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorSearBuckThron.size15">
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorThundar">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorThunder</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorThundar.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorDonJuan">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorDonJuan</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorDonJuan.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorOrange">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorOrange</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorOrange.size12">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorClaret">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorClaret</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorClaret.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+    </style>
+
+    <style name="Widget.Design.TextInputLayout" parent="AppTheme">
+        <item name="hintTextAppearance">@style/ProximaNovaBoldTextColorBlack.size18</item>
+        <item name="errorTextAppearance">@style/ProximaNovaRegularTextColorLipstick.size16</item>
+        <item name="counterTextAppearance">@style/ProximaNovaBoldTextColorBlack.size18</item>
+        <item name="counterOverflowTextAppearance">@style/ProximaNovaBoldTextColorBlack.size18
+        </item>
+        <item name="boxBackgroundMode">outline</item>
+    </style>
+
+
+
+    <style name="Theme_Dialog" parent="android:Theme.Holo.Dialog">
+        <item name="android:windowMinWidthMajor">80%</item>
+        <item name="android:windowMinWidthMinor">80%</item>
+    </style>
+
+
+    <!--    Chat Styles-->
+
+
+
+    <style name="sentMessageTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+    </style>
+
+
+    <style name="receivedMessageTextStyle">
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:gravity">end</item>
+        <item name="android:textColor">@color/colorGigas</item>
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+    </style>
+
+
+
+    <style name="floatingButtonStyle">
+        <item name="android:layout_width">70dp</item>
+        <item name="android:layout_gravity">bottom|end</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_marginBottom">80dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+
+    </style>
+
+
+    <style name="senderFirstLatterStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/chat_header_color</item>
+    </style>
+
+    <style name="chatTitleStyle">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">@font/comfortaa_regular</item>
+    </style>
+
+    <style name="headerLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:background">@color/chat_header_color</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
+
+    <style name="TextInputLayoutOutlineBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/colorMercury</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="cornerRadius">8dp</item>
+        <!--        <item name="android:textColorHint">@color/colorBlack</item>-->
+        <item name="hintAnimationEnabled">true</item>
+        <item name="hintTextAppearance">@style/ProximaNovaBoldTextColorMinsk.size14</item>
+        <item name="hintTextColor">@color/colorBlack</item>
+    </style>
+
+    <style name="roundedCornerImageViewStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+
+    <!--    TAXI THEMES-->
+
+    <!--    FONTS-->
+    <style name="ProximaNovaBoldTextColorBlack16">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularTextColorSilverChalice14">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorSilverChalice</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--==========================START SEMI BOLD Silver Chalice==================-->
+    <style name="ProximaNovaSemiBoldTextColorSilverChalice">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorSilverChalice</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="ProximaNovaSemiBoldTextColorSilverChalice.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--==========================START REGULAR BOLD Color Green==================-->
+    <style name="ProximaNovaBoldTextColorGreen">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorGreen</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorGreen.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <!--==========================START REGULAR BOLD Silver Chalice==================-->
+    <style name="ProximaNovaRegularTextColorSilverChalice">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorSilverChalice</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilverChalice.size16">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilverChalice.size14">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilverChalice.size20">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorSilverChalice.size18">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk16">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorMinsk</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack18">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularTextColorBlack16">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack20">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularTextColorBlack14">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorThunderbird14">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorThunderbird</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite16">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularTextColorBlack12">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorWhite18">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDoveGray16">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorDoveGray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorRedViolet14">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorRedViolet</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorDoveGray14">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorDoveGray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMinsk14">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorMinsk</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorRedViolet16">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorRedViolet</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorBlack18">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorOrangePeel16">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorOrangePeel</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMinsk16">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorMinsk</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorMinsk18">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorMinsk</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack20">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="ProximaNovaBoldTextColorBlack22">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorOrangePeel10">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorOrangePeel</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorMinsk11">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorMinsk</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+
+    <style name="ProximaNovaRegularTextColorDoveGray12">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorDoveGray</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorLipstick14">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorLipstick</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorGreen16">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorGreen</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite20">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorWhite32">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">32sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite14">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorWhite16">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaRegularTextColorGray16">
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ProximaNovaBoldTextColorBlack25">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+    <style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:datePickerStyle">@style/MyDatePickerStyle</item>
+        <item name="android:colorAccent">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyDatePickerStyle" parent="@android:style/Widget.Material.Light.DatePicker">
+        <item name="android:headerBackground">@color/colorPrimary</item>
+        <item name="android:datePickerMode">calendar</item>
+    </style>
+
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="background">@color/colorWhite</item>
+        <item name="itemBackground">@android:color/transparent</item>
+        <item name="itemIconPadding">12dp</item>
+        <item name="itemIconSize">18dp</item>
+        <item name="itemIconTint">@color/colorBoulder</item>
+        <item name="itemTextAppearance">@style/ProximaNovaBoldTextColorBlack.size16</item>
+    </style>
+
+
+    <style name="Theme.AppCompat.Translucent" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/lightGrey</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="ActionItem">
+        <item name="android:textSize">22sp</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">15dp</item>
+    </style>
+</resources>
