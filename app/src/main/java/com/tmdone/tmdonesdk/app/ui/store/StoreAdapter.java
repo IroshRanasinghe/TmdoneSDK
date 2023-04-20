@@ -184,8 +184,8 @@ public class StoreAdapter extends RecyclerView.Adapter<StoreAdapter.ViewHolderSt
             Drawable defaultImage = ContextCompat.getDrawable(itemView.getContext(), R.drawable.image_tmdone_logo_round);
             try {
                 Glide.with(itemView.getContext())
-                        .asBitmap()
                         .load(logoUrl)
+                        .asBitmap()
                         .error(defaultImage)
                         .placeholder(defaultImage)
                         .into(new BitmapImageViewTarget(mBinding.imageRestaurantLogo) {
