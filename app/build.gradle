@@ -1,7 +1,7 @@
 plugins {
-//    id 'com.android.library'
+    id 'com.android.library'
 //    id 'maven-publish'
-    id 'com.android.application'
+//    id 'com.android.application'
 }
 
 android {
@@ -9,7 +9,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.tmdone.tmdonesdk"
+//        applicationId "com.tmdone.tmdonesdk"
         minSdk 24
         targetSdk 33
         versionCode rootProject.ext.appVersionCode
@@ -38,7 +38,7 @@ android {
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            debuggable true
+            debuggable false
         }
     }
     compileOptions {
