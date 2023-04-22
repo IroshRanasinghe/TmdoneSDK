@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="restaurant"
+            type="com.tmdone.tmdonesdk.app.uimodels.Store" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.stores.individual_restaurant.IndividualRestaurantActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:fitsSystemWindows="true"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="@color/colorWhite"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="188dp"
+                        android:background="@color/colorSilverChalice">
+
+
+                        <ImageView
+                            android:id="@+id/image_cover"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:scaleType="fitXY"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:src="@drawable/placeholder_store_cover" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:alpha=".5"
+                            android:background="@color/colorBlack"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageView
+                            android:id="@+id/image_back"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="16dp"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_back_bg_color_white"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/relative_restaurant_logo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toStartOf="@+id/image_info"
+                            app:layout_constraintStart_toEndOf="@+id/image_back"
+                            app:layout_constraintTop_toTopOf="@+id/image_back">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/image_restaurant_logo"
+                                    android:layout_width="72dp"
+                                    android:layout_height="72dp"
+                                    android:background="@drawable/bg_circle_solid_color_white"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:restaurantLogo="@{restaurant.logoUrl}"
+                                    tools:src="@drawable/image_tmdone_logo_round" />
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        </RelativeLayout>
+
+
+                        <ImageView
+                            android:id="@+id/image_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_info_bg_color_white"
+                            app:layout_constraintBottom_toBottomOf="@+id/image_share"
+                            app:layout_constraintEnd_toStartOf="@+id/image_share"
+                            app:layout_constraintTop_toTopOf="@+id/image_share" />
+
+                        <ImageView
+                            android:id="@+id/image_share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp"
+                            android:src="@drawable/ic_share_solid_white"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="@+id/image_back"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/image_back" />
+
+                        <TextView
+                            android:id="@+id/text_restaurant_name"
+                            style="@style/ProximaNovaBoldTextColorWhite.size16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@{restaurant.name}"
+                            app:layout_constraintEnd_toEndOf="@id/relative_restaurant_logo"
+                            app:layout_constraintStart_toStartOf="@id/relative_restaurant_logo"
+                            app:layout_constraintTop_toBottomOf="@id/relative_restaurant_logo"
+                            tools:text="Al-Mas Indian Restaurant" />
+
+                        <TextView
+                            android:id="@+id/text_cuisine"
+                            style="@style/ProximaNovaRegularTextColorWhite.size12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/fetching"
+                            android:visibility="gone"
+                            app:layout_constraintEnd_toEndOf="@id/text_restaurant_name"
+                            app:layout_constraintStart_toStartOf="@id/text_restaurant_name"
+                            app:layout_constraintTop_toBottomOf="@id/text_restaurant_name" />
+
+
+                        <TextView
+                            android:id="@+id/text_rating"
+                            style="@style/ProximaNovaRegularTextColorWhite.size12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:padding="8dp"
+                            android:text="@string/fetching"
+                            app:drawableStartCompat="@drawable/ic_star_bg_orange"
+                            app:layout_constraintEnd_toEndOf="@id/text_restaurant_name"
+                            app:layout_constraintStart_toStartOf="@id/text_restaurant_name"
+                            app:layout_constraintTop_toBottomOf="@id/text_cuisine"
+                            tools:text="3.8 (142)" />
+
+                        <ImageView
+                            android:id="@+id/image_favourite"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:padding="8dp"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_rating"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/image_info" />
+
+
+                        <Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="8dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/image_favourite" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraint_delivery_info_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout3"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="@id/view2"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toEndOf="@id/view2"
+                                app:layout_constraintTop_toTopOf="@id/view2">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_minorder" />
+
+                                <TextView
+                                    android:id="@+id/text_min_order"
+                                    style="@style/ProximaNovaRegularTextColorBlack.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="@string/fetching"
+                                    tools:text="0.000 OMR" />
+
+
+                                <TextView
+                                    style="@style/ProximaNovaRegularTextColorSilver.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_min_order" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_margin"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintEnd_toStartOf="@+id/view1"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/image_market_place_indicator"
+                                    android:layout_width="26dp"
+                                    android:layout_height="24dp"
+                                    android:paddingStart="1dp"
+                                    android:paddingTop="6dp"
+                                    android:paddingEnd="1dp"
+                                    android:paddingBottom="2dp"
+                                    android:scaleType="fitCenter"
+                                    android:src="@drawable/ic_car"
+                                    android:visibility="gone" />
+
+
+                                <ImageView
+                                    android:id="@+id/image_tm_done_delivery_indicator"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:padding="4dp"
+                                    android:scaleType="fitStart"
+                                    android:src="@drawable/ic_thunder_bg_orange"
+                                    android:visibility="visible" />
+
+                                <TextView
+                                    android:id="@+id/text_delivery_fee"
+                                    style="@style/ProximaNovaRegularTextColorBlack.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="@string/fetching"
+                                    tools:text="0.500 OMR" />
+
+
+                                <TextView
+                                    style="@style/ProximaNovaRegularTextColorSilver.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_delivery_fee_2" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/view1"
+                                android:layout_width="2dp"
+                                android:layout_height="0dp"
+                                android:background="@color/colorGray"
+                                app:layout_constraintBottom_toBottomOf="@id/linearLayout1"
+                                app:layout_constraintEnd_toStartOf="@id/linearLayout2"
+                                app:layout_constraintStart_toEndOf="@id/linearLayout1"
+                                app:layout_constraintTop_toTopOf="@id/linearLayout1" />
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout2"
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="@id/view1"
+                                app:layout_constraintEnd_toStartOf="@id/view2"
+                                app:layout_constraintStart_toEndOf="@id/view1"
+                                app:layout_constraintTop_toTopOf="@id/view1">
+
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_delivery_time" />
+
+                                <TextView
+                                    android:id="@+id/text_delivery_time"
+                                    style="@style/ProximaNovaRegularTextColorBlack.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="@string/fetching"
+                                    tools:text="20 - 35 mins" />
+
+
+                                <TextView
+                                    style="@style/ProximaNovaRegularTextColorSilver.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_delivery_time" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/view2"
+                                android:layout_width="2dp"
+                                android:layout_height="0dp"
+                                android:background="@color/colorGray"
+                                app:layout_constraintBottom_toBottomOf="@id/linearLayout2"
+                                app:layout_constraintEnd_toStartOf="@id/linearLayout3"
+                                app:layout_constraintStart_toEndOf="@id/linearLayout2"
+                                app:layout_constraintTop_toTopOf="@id/linearLayout2" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/constraint_pickup_order_info_container"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout4"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/default_margin"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/view3"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:scaleType="fitStart"
+                                    android:src="@drawable/ic_delivery_time" />
+
+                                <TextView
+                                    android:id="@+id/text_preparation_time"
+                                    style="@style/ProximaNovaRegularTextColorBlack.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="@string/fetching"
+                                    tools:text="5 - 15 Min" />
+
+
+                                <TextView
+                                    style="@style/ProximaNovaRegularTextColorSilver.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_preparation_time" />
+                            </LinearLayout>
+
+                            <View
+                                android:id="@+id/view3"
+                                android:layout_width="2dp"
+                                android:layout_height="53dp"
+                                android:background="@color/colorGray"
+                                app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
+                                app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+                                app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout5"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                app:layout_constraintBottom_toBottomOf="@+id/view3"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toEndOf="@+id/view3"
+                                app:layout_constraintTop_toTopOf="@+id/view3">
+
+
+                                <ImageView
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:src="@drawable/ic_distance_color_yellow" />
+
+                                <TextView
+                                    android:id="@+id/text_distance"
+                                    style="@style/ProximaNovaRegularTextColorBlack.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="1"
+                                    android:text="@string/fetching"
+                                    tools:text="1.4km" />
+
+
+                                <TextView
+                                    style="@style/ProximaNovaRegularTextColorSilver.size12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/label_distance" />
+                            </LinearLayout>
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <include
+                            android:id="@+id/include_delivery_description_market_place"
+                            layout="@layout/partial_store_detail_delivery_description_market_place"
+                            android:visibility="gone" />
+
+                        <include
+                            android:id="@+id/include_delivery_description_tm_done"
+                            layout="@layout/partial_store_detail_delivery_description_tm_done_delivery"
+                            android:visibility="gone" />
+
+
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_collapse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/image_back_in_collapse"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_back_arrow"
+                    android:visibility="visible"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_store_name_collapse"
+                    style="@style/ProximaNovaBoldTextColorBlack.size18"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginLeft="24dp"
+                    android:text="@{restaurant.name}"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@+id/image_back_in_collapse"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/image_back_in_collapse"
+                    app:layout_constraintTop_toTopOf="@+id/image_back_in_collapse" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraint_stores_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLipstick"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/text_store_status"
+                    style="@style/ProximaNovaRegularTextColorWhite.size16"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:text="@string/fetching"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/menu_shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="8dp"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/colorGray" />
+
+
+                    <LinearLayout
+                        android:layout_width="120dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/colorGray" />
+
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:background="@color/colorGray" />
+
+                </LinearLayout>
+
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/image_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tab_menu"
+                    android:layout_width="0dp"
+                    android:contentDescription="Enter How Much Cookies You Want"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/image_search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/image_search"
+                    app:layout_constraintTop_toTopOf="@id/image_search"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@color/colorMinsk"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabMode="scrollable"
+                    app:tabSelectedTextColor="@color/colorPrimary"
+                    app:tabTextAppearance="@style/MyCustomTextAppearance"
+                    app:tabTextColor="@color/colorBlack" />
+
+
+                <EditText
+                    android:id="@+id/edit_search_restaurant"
+                    style="@style/ProximaNovaRegularTextColorMinsk.size15"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="@dimen/default_margin"
+                    android:background="@drawable/curved_background_shape"
+                    android:hint="@string/hint_search_here_simple"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/image_search"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/image_search"
+                    app:layout_constraintTop_toTopOf="@id/image_search" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_food_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.facebook.shimmer.ShimmerFrameLayout
+                    android:id="@+id/product_shimmerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+                        <include layout="@layout/loading_store_details"/>
+
+                        <include layout="@layout/loading_store_details"/>
+
+                        <include layout="@layout/loading_store_details"/>
+
+                        <include layout="@layout/loading_store_details"/>
+
+                        <include layout="@layout/loading_store_details"/>
+
+                        <include layout="@layout/loading_store_details"/>
+
+                        <include layout="@layout/loading_store_details"/>
+
+                        <include layout="@layout/loading_store_details"/>
+
+                        <include layout="@layout/loading_store_details"/>
+
+                        <include layout="@layout/loading_store_details"/>
+
+                    </LinearLayout>
+
+                </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_food"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightGray"
+                    android:visibility="visible" />
+
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout_empty_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="208dp"
+                            android:layout_height="208dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="centerInside"
+                            android:src="@drawable/ic_search_no_result" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="@string/label_no_results"
+                            android:textColor="@color/font"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </LinearLayout>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

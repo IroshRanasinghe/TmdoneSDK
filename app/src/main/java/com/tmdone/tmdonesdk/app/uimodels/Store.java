@@ -280,14 +280,16 @@ public class Store implements Parcelable{
                     .into(new BitmapImageViewTarget(imageView) {
                         @Override
                         protected void setResource(Bitmap bitmap) {
-                            if (!bitmap.isRecycled()) {
-                                RoundedBitmapDrawable circularBitmapDrawable =
-                                        RoundedBitmapDrawableFactory.create(resources, bitmap);
-                                circularBitmapDrawable.setCircular(true);
-                                imageView.setImageDrawable(circularBitmapDrawable);
-                            } else {
-                                // The bitmap is recycled, so we need to load it again before displaying it
-                                loadRestaurantLogo(imageView, logoUrl);
+                            if (bitmap!=null){
+                                if (!bitmap.isRecycled()) {
+                                    RoundedBitmapDrawable circularBitmapDrawable =
+                                            RoundedBitmapDrawableFactory.create(resources, bitmap);
+                                    circularBitmapDrawable.setCircular(true);
+                                    imageView.setImageDrawable(circularBitmapDrawable);
+                                } else {
+                                    // The bitmap is recycled, so we need to load it again before displaying it
+                                    loadRestaurantLogo(imageView, logoUrl);
+                                }
                             }
                         }
                     });

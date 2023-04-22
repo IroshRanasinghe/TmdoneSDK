@@ -1,0 +1,54 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Circle Page Indicator -->
+    <dimen name="viewpager_circleindicator_radius">4.5dp</dimen>
+    <dimen name="default_circle_indicator_radius">4dp</dimen>
+    <dimen name="default_circle_indicator_stroke_width">0dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="activity_padding">10dp</dimen>
+
+
+    <dimen name="simpletooltip_max_width">150dp</dimen>
+    <dimen name="simpletooltip_overlay_offset">10dp</dimen>
+    <dimen name="simpletooltip_margin">10dp</dimen>
+    <dimen name="simpletooltip_padding">8dp</dimen>
+    <dimen name="simpletooltip_arrow_width">30dp</dimen>
+    <dimen name="simpletooltip_arrow_height">15dp</dimen>
+    <dimen name="simpletooltip_animation_padding">4dp</dimen>
+
+    <dimen name="searchTextSize">15sp</dimen>
+
+    <dimen name="buttonCurve">20dp</dimen>
+
+    <dimen name="profileListFontSize">15sp</dimen>
+
+    <dimen name="pop_up_dialog_corners">10dp</dimen>
+
+
+    <!--    New UI-->
+    <dimen name="card_corner_radius">15dp</dimen>
+    <dimen name="btn_default_height">35dp</dimen>
+
+
+    <!--     pager-->
+    <dimen name="pager_dot_size">8dp</dimen>
+
+
+    <!--    Service header-->
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="default_button_height">45dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="editTextHeight">45dp</dimen>
+    <dimen name="small">44dp</dimen>
+    <dimen name="market_place_strip_height">45dp</dimen>
+    <dimen name="market_place_strip_margin_bottom">55dp</dimen>
+
+    <dimen name="chat_image_width">200dp</dimen>
+    <dimen name="chat_image_height">300dp</dimen>
+</resources>

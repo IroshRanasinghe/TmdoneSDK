@@ -1,12 +1,24 @@
-package com.tmdone.tmdonesdk.app.ui;
+package com.tmdone.tmdonesdk.app.ui.store;
 
 import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
 
+import static com.tmdone.tmdonesdk.app.utility.PaginationListener.PAGE_START;
+import static com.tmdone.tmdonesdk.core.Constants.BUNDLE_IS_PICKUP_ORDER;
+import static com.tmdone.tmdonesdk.core.Constants.BUNDLE_IS_STORE_FAVOURITE;
+import static com.tmdone.tmdonesdk.core.Constants.BUNDLE_LATITUDE;
+import static com.tmdone.tmdonesdk.core.Constants.BUNDLE_LONGITUDE;
+import static com.tmdone.tmdonesdk.core.Constants.BUNDLE_SELECTED_STORE;
+import static com.tmdone.tmdonesdk.core.Constants.BUNDLE_STORE_LIST_CURRENT_POSITION;
+
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -36,6 +48,19 @@ public class StoreListingActivity extends AppCompatActivity {
     private StoreAdapter mStoreAdapter;
 
     private List<Double> mNearByCode;
+
+    ActivityResultLauncher<Intent> mIndividualStoreForForResult = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+            result -> {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    if (result.getData().hasExtra(BUNDLE_STORE_LIST_CURRENT_POSITION) && result.getData().hasExtra(BUNDLE_IS_STORE_FAVOURITE)) {
+                        int mCurrentAdapterPosition = result.getData().getExtras().getInt(BUNDLE_STORE_LIST_CURRENT_POSITION);
+                        if (mCurrentAdapterPosition > 0) {
+                            boolean isFavorite = result.getData().getExtras().getBoolean(BUNDLE_IS_STORE_FAVOURITE);
+                            mStoreAdapter.makeFavouriteBatch(mCurrentAdapterPosition, isFavorite);
+                        }
+                    }
+                }
+            });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +99,24 @@ public class StoreListingActivity extends AppCompatActivity {
         attachStoreAdapterListener();
     }
 
+    private void setupSwipeRefresh() {
+        mBinding.swipeRefreshLayout.setOnRefreshListener(this::onScreenRefresh);
+        mBinding.swipeRefreshLayout.setColorSchemeResources(
+                R.color.colorMinsk,
+                R.color.colorGigas,
+                R.color.colorSilverChalice,
+                R.color.colorWhite);
+        mBinding.swipeRefreshLayout.setRefreshing(false);
+    }
+    private void onScreenRefresh() {
+        mBinding.swipeRefreshLayout.setRefreshing(false);
+        mRestaurantViewModel.currentPage = PAGE_START;
+        if (mStoreAdapter != null) {
+            mStoreAdapter.clear();
+        }
+
+        makeLoadStoreRequest();
+    }
     private void attachPagination(LinearLayoutManager linearLayoutManager) {
         mBinding.recyclerRestaurant.addOnScrollListener(new PaginationListener(linearLayoutManager) {
             @Override
@@ -103,13 +146,14 @@ public class StoreListingActivity extends AppCompatActivity {
     }
 
     private void navigateToDetailStoreView(int adapterPosition, Store store) {
-//        Intent intent =
-//
-//        intent.putExtra(BUNDLE_SELECTED_STORE, store);
-//        intent.putExtra(BUNDLE_STORE_LIST_CURRENT_POSITION, adapterPosition);
-//        intent.putExtra(BUNDLE_IS_STORE_FAVOURITE, store.getFavourite());
-//        intent.putExtra(BUNDLE_IS_PICKUP_ORDER, mIsPickupOrder);
-//        mIndividualStoreForForResult.launch(intent);
+        Intent intent =new Intent(StoreListingActivity.this,IndividualStoreActivity.class);
+        intent.putExtra(BUNDLE_SELECTED_STORE, store);
+        intent.putExtra(BUNDLE_STORE_LIST_CURRENT_POSITION, adapterPosition);
+        intent.putExtra(BUNDLE_IS_STORE_FAVOURITE, store.getFavourite());
+        intent.putExtra(BUNDLE_IS_PICKUP_ORDER, false);
+        intent.putExtra(BUNDLE_LATITUDE, mNearByCode.get(1));
+        intent.putExtra(BUNDLE_LONGITUDE, mNearByCode.get(0));
+        mIndividualStoreForForResult.launch(intent);
     }
 
     private void makeLoadStoreRequest() {

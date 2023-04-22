@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="content"
+            type="com.tmdone.tmdonesdk.app.uimodels.SingleRestaurantItemContent" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linear_food_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:background="@color/colorWhite">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/constraint_image_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/constraint_content_container"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintHorizontal_weight="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:elevation="@dimen/cardview_default_elevation"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/linear_item_price_container"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_name">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp">
+
+                    <ImageView
+                        android:id="@+id/image_food"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="2dp"
+                        android:scaleType="centerInside"
+                        app:foodImage="@{content.image}"
+                        tools:src="@drawable/ic_grocery_placeholder" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_content_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/linear_on_feature_container"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/constraint_image_container"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/text_name"
+                style="@style/ProximaNovaBoldTextColorBlack.size16"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@{content.name}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Grilled BBQ " />
+
+
+            <TextView
+                android:id="@+id/text_description"
+                style="@style/ProximaNovaRegularTextColorGray.size14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@{content.description}"
+                app:layout_constraintEnd_toEndOf="@id/text_name"
+                app:layout_constraintStart_toStartOf="@id/text_name"
+                app:layout_constraintTop_toBottomOf="@id/text_name"
+                tools:text="5 Pieces of Chicken Breast grilled with …" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linear_item_price_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                app:layout_constraintEnd_toEndOf="@+id/text_description"
+                app:layout_constraintStart_toStartOf="@+id/text_description"
+                app:layout_constraintTop_toBottomOf="@id/text_description">
+
+
+                <TextView
+                    android:id="@+id/text_old_price"
+                    style="@style/ProximaNovaBoldTextColorLipstick.size14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:paddingEnd="10dp"
+                    android:visibility="gone"
+                    tools:text="12022.000" />
+
+                <TextView
+                    android:id="@+id/text_price"
+                    style="@style/ProximaNovaBoldTextColorBlack.size14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    tools:text="12022.000" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear_on_feature_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="0.2"
+            app:layout_constraintStart_toEndOf="@+id/constraint_content_container"
+            app:layout_constraintTop_toTopOf="@+id/constraint_content_container">
+
+            <ImageView
+                android:id="@+id/img_status"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:adjustViewBounds="true"
+                android:src="@drawable/sale_icon"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/text_name" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/text_out_of_stock"
+            style="@style/ProximaNovaBoldTextColorWhite.size14"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.8"
+            android:background="@color/colorBlack"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/out_of_stock"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,6 +1,7 @@
 plugins {
-    id 'com.android.library'
+//    id 'com.android.library'
 //    id 'maven-publish'
+    id 'com.android.application'
 }
 
 android {
@@ -8,7 +9,7 @@ android {
     compileSdk 33
 
     defaultConfig {
-//        applicationId "com.tmdone.tmdonesdk"
+        applicationId "com.tmdone.tmdonesdk"
         minSdk 24
         targetSdk 33
         versionCode rootProject.ext.appVersionCode
@@ -37,7 +38,7 @@ android {
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            debuggable false
+            debuggable true
         }
     }
     compileOptions {
@@ -82,6 +83,8 @@ dependencies {
 
     // shimmer layout
     implementation 'com.facebook.shimmer:shimmer:0.5.0@aar'
+
+    implementation("io.coil-kt:coil:1.1.1")
 
 }
 //afterEvaluate {

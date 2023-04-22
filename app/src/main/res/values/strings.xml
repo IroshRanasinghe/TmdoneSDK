@@ -1,17 +1,988 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TM Done SDK</string>
-    <string name="msg_something_went_wrong">Oops, Something Went Wrong..Please Try Again!</string>
-    <string name="msg_network_not_available">To use our app, you need to be connected to the internet.</string>
-    <string name="label_new">NEW</string>
+    <string name="application_name" translatable="false">TM DONE</string>
+    <string name="map_key" translatable="false">AIzaSyBxCACesQOMrfqkHNlmnWpzOumyBVGeDEo</string>
+
+    <string name="intercom_api_key" translatable="false">android_sdk-1a23d6faac1734c3f6ff3b67ca8765abd97d5e78</string>
+    <string name="intercom_app_id" translatable="false">q9t25a2i</string>
+
+    <string name="label_enter_login_details">Enter your login details</string>
+    <string name="title_registration">Fill in your details to get started!</string>
+    <string name="hint_name">Your name</string>
+    <string name="hint_phone_number" translatable="false">9900 9900</string>
+    <string name="hint_email">Your Email</string>
+    <string name="hint_password">Password</string>
+    <string name="action_sign_up">Sign Me Up!</string>
+    <string name="action_log_me_in">Log Me In!</string>
+    <string name="action_forgot_password">Forgot Password?</string>
+    <string name="action_singup">Sign Up</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_nice_to_meet_you_too">Nice to meet you too!</string>
+    <string name="label_onboarding_page_one">Hey there! \n It’s nice to meet you.</string>
+    <string name="label_onboarding_page_two">We’re happy to deliver everything you need to your doorsteps!</string>
+    <string name="label_onboarding_page_three">To stay updated on your order status, turn your notifications on!</string>
+    <string name="action_share_my_location">Share my location!</string>
+    <string name="action_done">Done</string>
+    <string name="action_done_in_upper_case">DONE</string>
+    <string name="action_done_with_exclamation">Done!</string>
     <string name="fetching">Fetching</string>
-    <string name="label_busy">Busy</string>
-    <string name="message_no_result">No Results</string>
-    <string name="label_mins">mins</string>
-    <string name="label_not_available">Not Available</string>
-    <string name="label_distance_km">KM</string>
+    <string name="msg_phone_number_required">Mobile number is required !</string>
+    <string name="msg_confirm_password_required">Confirm password is required !</string>
+    <string name="msg_passwords_not_match">Passwords do not match !</string>
+    <string name="msg_password_required">Password is required !</string>
+    <string name="msg_network_not_available">To use our app, you need to be connected to the internet.</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_ok">Ok</string>
+    <string name="title_alert">Alert</string>
+    <string name="action_search">Search</string>
+    <string name="action_cuisines">Cuisines</string>
+    <string name="action_filters">Filters</string>
+    <string name="label_all_restaurants">All Restaurants</string>
+    <string name="label_off">% Off</string>
     <string name="label_delivery_fee">Delivery Fee :</string>
-    <string name="delivery_fee">Delivery Fee</string>
-    <string name="label_free">FREE</string>
+    <string name="title_restaurants_near_you">Restaurants Near You</string>
+    <string name="label_busy">Busy</string>
     <string name="label_closed">Closed</string>
+    <string name="msg_name_required">Name is required !</string>
+    <string name="msg_invalid_email_address">Invalid email address !</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="label_enter_phone_number_to_reset_password">Enter your mobile number to reset your password</string>
+    <string name="action_reset">Reset</string>
+    <string name="label_enter_otp">Enter OTP</string>
+    <string name="label_didn_t_recieve_otp">Didn’t receive OTP?</string>
+    <string name="action_click_here"><u>Click here</u></string>
+    <string name="msg_otp_required">OTP code required !</string>
+    <string name="title_enter_new_password">Enter new password</string>
+    <string name="hint_new_password">Enter new password</string>
+    <string name="action_lets_go">Let’s Go!</string>
+    <string name="action_home">Home</string>
+    <string name="action_home_page">Homepage</string>
+    <string name="action_orders">Orders</string>
+    <string name="action_offers">Offers</string>
+    <string name="action_more">More</string>
+    <string name="label_app_home_greeting">Hi %1$s !   What are you feeling like today?</string>
+    <string name="label_working_hours">Working Hours:</string>
+    <string name="hint_search_store">What are you craving?</string>
+    <string name="label_your_search_history">Your Search History</string>
+    <string name="hint_search_cuisines">Search your favorite cuisines</string>
+    <string name="label_sort_by">Sort By:</string>
+    <string name="action_track_order">Track Order</string>
+    <string name="label_currency_omr_non_translated" translatable="false">OMR</string>
+    <string name="action_view_receipt">View Receipt</string>
+    <string name="action_rate_order">Rate Order</string>
+    <string name="action_re_Order">Re-Order</string>
+    <string name="action_edit">EDIT</string>
+    <string name="fetch">Fetching…</string>
+    <string name="action_tm_done_credit">TM DONE Credit</string>
+    <string name="action_change_password">Change Password</string>
+    <string name="action_manage_cards">Manage Cards</string>
+    <string name="action_saved_address">Saved Addresses</string>
+    <string name="label_todays_deals">Today’s Deals</string>
+    <string name="action_add_new_address">Add New Address</string>
+    <string name="label_no_saved_places">No Saved Places</string>
+    <string name="label_enter_your_phone_number">Enter your mobile number!</string>
+    <string name="action_next">Next</string>
+    <string name="msg_something_went_wrong">Oops, Something Went Wrong..Please Try Again!</string>
+    <string name="action_submit">Submit</string>
+    <string name="msg_password_length_not_enough">The Password must be at least 6 characters long!</string>
+    <string name="msg_account_successfuly_created">Successfully Signed Up To TM Done!</string>
+    <string name="select_language">Choose your language</string>
+    <string name="rate_order_title">Please provide your ratings to improve your experience!</string>
+    <string name="done">Done</string>
+    <string name="select_on_map">Select on Map</string>
+    <string name="address_details">Address Details</string>
+    <string name="address_nickname">Address Nickname</string>
+    <string name="area">Area</string>
+    <string name="way_no">Way No.</string>
+    <string name="building_no">Building No.</string>
+    <string name="floor_no">Floor No. (Optional)</string>
+    <string name="flat_no">Flat No. (Optional)</string>
+    <string name="landmark">Landmark (Optional)</string>
+    <string name="done_special">DONE!</string>
+    <string name="title_add_address">Add Address</string>
+    <string name="msg_need_to_login_to_continue">Please   Sign In To Continue !</string>
+    <string name="label_mins">Mins</string>
+    <string name="rating_delivery_experience">How was your delivery experience?</string>
+    <string name="rating_food">How was your order?</string>
+    <string name="rating_restaurant">How would you rate the vendor?</string>
+    <string name="label_free">FREE</string>
+    <string name="based_on_selection">Based on selection</string>
+    <string name="label_min_order">Min Order</string>
+    <string name="label_delivery_fee_2">Delivery Fee</string>
+    <string name="label_delivery_time">Delivery Time</string>
+    <string name="title_cuisine">Cuisine</string>
+    <string name="title_cuisines">Cuisines</string>
+    <string name="title_my_order">My Orders</string>
+    <string-array name="my_order_tab_titles">
+        <item>Ongoing Orders</item>
+        <item>Past Orders</item>
+    </string-array>
+    <string name="fetching_data">Fetching Data</string>
+    <string name="ratings">ratings</string>
+    <string name="quantity">Quantity</string>
+    <string name="label_order_id">Order ID</string>
+    <string name="label_cancelled">Cancelled</string>
+    <string name="label_completed">Completed</string>
+    <string name="label_offers">Offers</string>
+    <string name="order_details">Order Details</string>
+    <string name="order_id">Order ID</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="delivery_fee">Delivery Fee</string>
+    <string name="paid_by">Paid by</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="help">Help</string>
+    <string name="label_waiting_for_restaurant_to_confirm">Awaiting restaurant confirmation.</string>
+    <string name="label_waiting_for_store_to_confirm">Awaiting store confirmation.</string>
+    <string name="label_preparing_your_order">Preparing your order</string>
+    <string name="label_your_order_will_be_ready_in">Your order will be ready in %1$s mins.</string>
+    <string name="label_driver_is_picking_up_your_order">The driver is picking up your order</string>
+    <string name="driver_arrived">Driver Arrived</string>
+    <string name="the_driver_is_heading_your_way">The Driver is heading your way</string>
+    <string name="the_driver_arrived_at_your">The Driver arrived at your location! Pending Payment is</string>
+
+
+    <string name="preparation_note">Add a note</string>
+    <string name="special_note_hint">Add your notes here</string>
+    <string name="qty">Quantity</string>
+    <string name="add_to_cart">Add to Cart</string>
+
+    <string name="optional">Optional</string>
+    <string name="optionalWithBrackets">(Optional)</string>
+    <string name="required">Required</string>
+
+    <string name="maximum">Maximum</string>
+    <string name="select_item_between">Select item between </string>
+    <string name="for_per_item">For per item </string>
+    <string name="and">and </string>
+    <string name="label_omr_currency">OMR</string>
+    <string name="item">Item</string>
+    <string name="items">Items</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="cancel">Cancel</string>
+    <string name="update_cart">Update Cart</string>
+    <string name="clear_cart">Clear Cart</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="you_have_an_existing_cart">You have an existing cart! Would you like to empty it?</string>
+    <string name="you_have_an_existing_cart_with_different_order_type">You have an existing cart. Would you like to empty it?</string>
+    <string name="fill_all_required_fields">Fill All Required Fields</string>
+    <string name="message_added_to_favourite">is added to favourites !</string>
+    <string name="label_user">User</string>
+    <string name="add_a_note">Add a note</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="delivery_charges">Delivery Charges</string>
+    <string name="total">Total</string>
+    <string name="discount">Discount</string>
+    <string name="promo_discount">Promo Code \"%1$s \"</string>
+    <string name="select_payment_method">Select Payment Method</string>
+    <!--    <string name="change_location">Change Location</string>-->
+    <string name="proceed_to_checkout">Proceed to Checkout</string>
+    <string name="label_goto_home">Go Home</string>
+    <string name="empty_chat_message">Empty</string>
+    <string name="msg_invalid_phone_number">Invalid phone number</string>
+    <string name="address_nick_name">Address Nickname</string>
+    <string name="msg_address_nick_name_required">Address nickname required !</string>
+    <string name="msg_area_required">Area name required !</string>
+    <string name="msg_way_no_required">Way no required !</string>
+    <string name="msg_building_no_required">Building no required !</string>
+    <string name="msg_location_required">Please select a location from map !</string>
+    <string name="hint_enter_your_pick_location">Enter your pick location</string>
+    <string name="action_set_location">Set Location</string>
+    <string name="title_filter">Filters</string>
+    <string name="title_search">Search</string>
+    <string name="your_order">Your Order</string>
+    <string name="add_more">+ Add More</string>
+    <string name="label_selected_location">Selected Location</string>
+    <string name="msg_location_successfully_saved">Location Successfully Saved !</string>
+    <string name="label_extra_direction">Extra Directions (Optional)</string>
+    <string name="label_delivery_note">Delivery Note</string>
+    <string name="title_delivery_details">Delivery Details</string>
+    <string name="msg_location_permission_not_allowed">Your location may not be accurate, please allow access to your location.</string>
+    <string name="payment_summary">Payment Summary</string>
+    <string name="promo">Promo</string>
+    <string name="all">All</string>
+    <string name="add">Add</string>
+    <string name="itemNotAvailable">Not Available</string>
+    <string name="view_more"><![CDATA[View More >]]></string>
+    <string name="back_with_symbol"><![CDATA[< Back]]></string>
+    <!--    <string name="msg_failed_to_fetch_location">Failed To Fetch Location</string>-->
+
+    <string name="msg_failed_to_fetch_location">Failed To Fetch Location</string>
+    <string name="delivery_location">Delivery Location</string>
+    <string name="change_location">Change Location</string>
+    <string name="location_far_message">It seems you’re a little bit far. Are you sure you’ve selected the correct location?</string>
+    <string name="location_far_message_pickup">It seems you’re a little bit far. Are you sure you’ve selected the correct location?</string>
+    <string name="payment_summery">Payment Summery</string>
+    <string name="delivery_time">Delivery Time</string>
+    <!--    <string name="select_payment_method">Select Payment Method</string>-->
+    <!--    <string name="done">Done</string>-->
+    <string name="grand_total">Grand Total</string>
+    <string name="order_now">Order Now</string>
+    <string name="schedule">Schedule</string>
+    <string name="self_pick_up">Self Pick-up</string>
+
+    <string name="msg_unable_to_track_the_order">Order tracking failed..Please try again !</string>
+    <string name="label_ongoing_orders_currently_empty">No ongoing orders at the moment.</string>
+    <string name="label_past_orders_currently_empty">No past orders at the moment.</string>
+    <string name="label_municipality_tax">Municipality Tax</string>
+    <string name="label_tourism_tax">Tourism Tax</string>
+    <string name="label_vat">VAT</string>
+    <string name="label_discount">Discount</string>
+    <string name="label_used_tm_done_credits">Tm Done Credits Used</string>
+    <string name="msg_confirm_order_cancellation">Are you sure you want to cancel your order?</string>
+    <string name="action_yes">Yes</string>
+    <string name="action_no">No</string>
+    <string name="label_thanks_for_ordering_from">Thanks for ordering from</string>
+    <string name="label_order_details">Order Details</string>
+    <string name="label_payment_details">Payment Details</string>
+    <string name="label_gross_total">Gross Total</string>
+    <string name="label_grand_total">Grand Total</string>
+    <string name="title_receipt">Receipt</string>
+    <string name="label_empty_food">No Items</string>
+    <string name="label_no_item_found">No Item Found</string>
+    <string name="hint_move_the_pin_to_your_location">Move the Pin To Your Location</string>
+    <string name="msg_rate_previous_order">Click here to rate your last order with TmDone.</string>
+    <string name="title_rate_previous_order">Rate your order !</string>
+    <string name="label_notification_type_general">General</string>
+    <string name="label_notification_type_taxi" translatable="false">TAXI</string>
+    <string name="label_notification_type_top_up_status" translatable="false">TOPUPSTATUS</string>
+    <string name="label_notification_type_order_status" translatable="false">ORDERSTATUS</string>
+    <string name="label_call">Call %1$s</string>
+    <string name="label_text_call">Call</string>
+    <string name="label_driver_is_heading_your_way">The Driver is heading your way</string>
+    <string name="label_driver_arrived">The Driver arrived at your location!   Pending Payment is OMR %1$s</string>
+    <string name="view_cart">View Cart</string>
+    <string name="order_success_message">Your order has been  placed successfully!</string>
+    <string name="order_success_message_without_explanation">Your order has been  placed successfully</string>
+    <string name="track">Track</string>
+    <string name="done_with_explanation">Done!</string>
+
+    <string name="scheduleDateErrorTitle">Invalid date</string>
+    <string name="scheduleDateErrorMessage">Selected date is a past date !</string>
+
+    <string name="label_all_groceries">All Groceries</string>
+    <string name="action_brands">Store Type</string>
+    <string name="goto_home">Go to Home</string>
+    <string name="empty_cart_message">It seems like you’ve changed your mind. would you like to order from somewhere else?</string>
+    <string name="label_stores_empty">There is nothing here Please Check your Location!</string>
+    <string name="action_order_now">Order Now</string>
+    <string name="action_explore_more">Explore More</string>
+
+    <string name="restaurant_busy">The restaurant is busy now. Please try to order again later.</string>
+    <string name="store_busy">The store is busy now. Please try to order again later.</string>
+    <string name="minimum_order_value">Minimum Order Value</string>
+    <string name="orders_will_be_scheduled_after">Orders will be scheduled for delivery after</string>
+    <string name="hours">hours.</string>
+    <string name="is_offline_now">is Offline now</string>
+
+    <string name="title_schdule_date_error">Invalid date</string>
+    <string name="msg_schedule_date_error">Selected date is a past date !</string>
+
+
+    <string name="pay_with_tmdone_credit">Pay with TM DONE Credit</string>
+
+
+    <string name="munmunicipality_tax">Municipality Tax </string>
+    <string name="tourismTax">Tourism Tax</string>
+    <string name="vat">VAT</string>
+
+    <string name="paid_with_tmdone_credit">Paid with TM DONE Credit</string>
+    <string name="tmdone_credit_balance">TM DONE Credit\'s Balance</string>
+    <string name="balance_to_be_paid">Balance to be Paid</string>
+    <string name="add_promo_code">Add Promo Code</string>
+    <string name="add_promo_code_with_plus">+ Add Promo Code</string>
+    <string name="add_promo_code_with_plus_and_question_mark">+ Add Promo Code?</string>
+    <string name="insert_promo_code">Insert Your Code Here!</string>
+    <string name="promo_code_cannot_be_empty">You haven’t entered any promo code.</string>
+    <string name="search_for">Search for</string>
+    <string name="people_also_ordered">People Also Ordered</string>
+    <string name="label_language_settings">Language Settings</string>
+    <string name="label_notifications">Notifications</string>
+    <string name="label_live_chat">Live Chat</string>
+    <string name="label_call_center">Call Center</string>
+    <string name="label_my_profile">My Profile</string>
+    <string name="label_my_favourites">My Favorites</string>
+    <string name="label_loyalty_program">Loyalty Program</string>
+    <string name="label_tm_done_credit">TM DONE Credit</string>
+    <string name="label_about_us">About Us</string>
+    <string name="label_refer_a_friend">Refer a Friend</string>
+    <string name="label_logout">Log Out</string>
+    <string name="msg_confirm_logout">Do you want to logout from the app?</string>
+    <string name="title_more">More</string>
+    <string name="label_two_digits_zero" translatable="false">00</string>
+    <string name="title_my_profile">My Profile</string>
+    <string name="title_saved_addresses">Saved Addresses</string>
+    <string name="label_available_credit">Available Credit</string>
+    <string name="title_tm_done_credits">TM DONE Credit</string>
+    <string name="label_credit_history">Credit History</string>
+    <string name="hint_current_password">Current password</string>
+    <string name="hint_confirm_new_password">Confirm new password</string>
+    <string name="msg_current_password_required">Current password required !</string>
+    <string name="msg_new_password_required">New password required !</string>
+    <string name="title_change_password">Change password</string>
+    <string name="msg_password_successfully_changed">Password successfully changed !</string>
+    <string name="action_save_profile">Save Profile</string>
+    <string name="hint_full_name">Full Name</string>
+    <string name="hint_date_format">Date of Birth(DDMMYY)</string>
+    <string name="title_edit_profile">Edit Profile</string>
+    <string name="label_gender">Gender</string>
+    <string name="label_male">Male</string>
+    <string name="label_female">Female</string>
+    <string name="label_nationality">Nationality</string>
+    <string name="msg_full_name_required">Full Name Required!</string>
+    <string name="msg_alert_upload_image">Do you want to take a photo or upload it from your gallery?</string>
+    <string name="action_camera">Camera</string>
+    <string name="action_gallery">Gallery</string>
+    <string name="msg_permissions_denied">Permissions Denied!</string>
+    <string name="label_select_a_pic">Select a Picture</string>
+    <string name="msg_profile_successfully_updated">Your profile has been updated!</string>
+    <string name="msg_profile_image_update_successfully">Profile Image Successfully Updated !</string>
+    <string name="out_of_stock">Out of Stock</string>
+    <string name="msg_saved_address_delete_confirmation">Do You Want to Delete This Saved Address?</string>
+    <string name="search_for_grocery">Search items</string>
+    <string name="label_not_available">Not Available</string>
+    <string name="label_offers_empty">Stay tuned for new offers!</string>
+    <string name="hint_search_brand">Search the store category</string>
+    <string name="rating_delivery_timing">How was the delivery timing?</string>
+    <string name="write_a_review">Write a review</string>
+    <string name="action_instagram">Instagram</string>
+    <string name="action_twitter">Twitter</string>
+    <string name="action_facebook">Facebook</string>
+    <string name="action_website">Website</string>
+    <string name="label_faq">FAQ</string>
+    <string name="label_privacy_policy">Privacy Policy</string>
+    <string name="label_t_and_c"><![CDATA[Terms & Conditions]]></string>
+    <string name="label_follow_us">Follow Us</string>
+    <string name="title_about_us">About Us</string>
+    <string name="label_promo_code">Promo Code " %1$s "</string>
+    <string name="label_notifications_currently_empty">No notifications !</string>
+    <string name="label_empty_favourites">Favourite Stores  Currently Empty !</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="message_removed_from_favourite">is removed from favourites !</string>
+    <string name="title_brnd">Store Category</string>
+    <string name="title_rate_order">Rate Order</string>
+    <string name="msg_order_rating_successfully">Order Rated Successfully !</string>
+    <string name="label_four_stars" translatable="false">****</string>
+    <string name="label_add_new_omani_credit_debit_card">Add new Omani credit/debit card</string>
+    <string name="label_add_new_international_card">Add new international card</string>
+    <string name="title_manage_cards">Manage Cards</string>
+    <string name="title_add_new_card">Add New Card</string>
+    <string name="label_name">Name</string>
+    <string name="label_card_number">Card Number</string>
+    <string name="label_expiry_date">Expiry Date</string>
+    <string name="label_cvv">CVV</string>
+    <string name="action_continue">Continue</string>
+    <string name="label_do_you_want_to_remove_your_visa_debit_card">Do you want to remove your   %1$s %2$s card?</string>
+    <string name="title_no_internet">No Internet Connection</string>
+    <string name="title_out_of_zone">Out of Zone!</string>
+    <string name="label_empty_saved_address">You do not have any \n saved places yet.</string>
+    <string name="action_turn_on_location">Turn on Location</string>
+    <string name="msg_location_not_accurate">Your location may not be accurate,\n please allow access to your location.</string>
+    <string name="msg_detecting_location">Detecting Location..Please Wait</string>
+    <string name="label_pay_remaining_amount">Pay remaining amount OMR 3,345 with</string>
+    <string name="label_add_new_card">Add New Card</string>
+    <string name="label_change_your_location">Change your Location</string>
+    <string name="label_delivery_location">Delivery Location</string>
+    <string name="label_saved_address">Saved Addresses</string>
+    <string name="label_add_new_address">Add New Address</string>
+    <string name="action_change_your_location">Change Your Location</string>
+    <string name="label_grocery">Grocery</string>
+    <string name="message_please_select_a_delivery_location">Please select a delivery location</string>
+    <string name="action_login">Login</string>
+    <string name="label_decimal_value">0.000 OMR</string>
+    <string name="label_out_of_stock">Out of stock</string>
+    <string name="label_special_request">Special Request</string>
+    <string name="msg_please_save_your_location_to_continue">Please save your location to continue</string>
+    <string name="hint_enter_your_location">Enter Your location</string>
+    <string name="msg_email_required">Email Is Required!</string>
+    <string name="title_faq">FAQ</string>
+    <string name="msg_grocery_is_closed_now">The store is closed now. You can schedule your order to be delivered during operational hours</string>
+    <string name="msg_grocery_is_closed_now_pickup">The store is closed now. You can schedule your order to be picked up during operational hours.</string>
+    <string name="msg_restaurant_is_closed_now">The restaurant is closed now. You can schedule your order to be delivered during operational hours</string>
+    <string name="msg_restaurant_is_closed_now_pickup">The restaurant is closed now. You can schedule your order to be picked up during operational hours.</string>
+    <string name="msg_restaurant_is_busy_now">The restaurant is busy now. Please try to order again later.</string>
+    <string name="msg_grocery_is_busy_now">The store is busy now. Please try to order again later.</string>
+    <string name="msg_order_schedule">Orders will be scheduled for delivery after</string>
+    <string name="msg_order_cancellation_by_vendor">Sorry your order got cancelled !</string>
+    <string name="label_order_cancellation_by_vendor">Order got cancelled !</string>
+    <string name="title_privacy_policy">Privacy Policy</string>
+    <string name="title_t_and_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="label_all_flowers">All Flowers</string>
+    <string name="label_all_stores">All Stores</string>
+    <string name="label_categories">Categories</string>
+    <string name="label_point">Points</string>
+    <string name="label_change_payment_method">Change Payment Method</string>
+    <string name="label_cash_on_delivery">Cash on Delivery</string>
+    <string name="label_card_on_delivery">Card on Delivery</string>
+    <string name="label_payment_declined">Payment Declined</string>
+    <string name="label_card">Card</string>
+    <string name="label_empty_saved_cards">You do not have any saved Cards yet.</string>
+    <string name="label_add_cvv">Add CVV Code</string>
+    <string name="hint_insert_your_card_cvv_here">Insert Your Card CVV Here!</string>
+    <string name="msg_card_holder_name_required">Card Holder Name Required!</string>
+    <string name="msg_card_number_required">Card Number Required!</string>
+    <string name="msg_cvv_number_required">Card CVV Number Required!</string>
+    <string name="msg_card_expiration_month_required">Card Expiration Month Required!</string>
+    <string name="msg_card_expiration_year_required">Card Expiration Year Required!</string>
+    <string name="hint_year" translatable="false">YY</string>
+    <string name="hint_month" translatable="false">MM</string>
+    <string name="label_payment_unable_to_process">Sorry your payment cannot be processed right now.  Please change your payment method.</string>
+    <string name="label_price_on_selection">Price on selection</string>
+    <string name="msg_save_delivery_address">Please save your delivery address to continue..</string>
+    <string name="msg_invalid_card_number">Invalid Card Number</string>
+    <string name="msg_invalid_card_expiration_date">Invalid Card expiration date</string>
+
+    <!--No internet messages-->
+    <string name="noInternetTitle">No Internet Connection</string>
+    <string name="noInternetMessage">Please turn on your internet.</string>
+    <string name="noInternetRetry">Retry</string>
+    <string name="noInternetSnakeBarMessage">Seems like your internet connection is not working. Please check!</string>
+    <string name="msg_required">Required !</string>
+    <string name="msg_confirm_delete_card">Do You Want To Remove This Card?</string>
+    <string name="hint_cvv">CVV</string>
+    <string name="label_no_results">No Results</string>
+    <string name="label_Quality">Quality</string>
+    <string name="label_vendor_rating">Vendor Rating</string>
+    <string name="title_store_review">Rating and Reviews</string>
+    <string name="label_reviews">Reviews</string>
+    <string name="label_overall_rating">Overall Rating :</string>
+    <string name="label_min">Min</string>
+    <string name="hint_search_here">Search Here</string>
+    <string name="hint_search_here_simple">Search here</string>
+    <string name="msg_confirm_change_language">Are you sure you want to change the Language to  %1$s ?</string>
+    <string name="msg_product_added_to_favourites">Successfully Added To Favourites!</string>
+    <string name="msg_product_removed_from_favourites">Successfully Removed Product From Favourites!</string>
+    <string name="label_favourites">Favourites</string>
+    <string name="msg_card_not_selected">Please Select an Existing Card or Add a New Card To Proceed With Card Payment</string>
+    <string name="label_select_location">Select Location</string>
+    <string name="msg_failed_to_initialize_notifications">Failed to Initialize Notifications!</string>
+    <string name="action_update">Update</string>
+    <string name="label_add">Add</string>
+    <string name="label_number_of_ratings">Ratings</string>
+    <string name="label_new">NEW</string>
+    <string name="label_packaging">Packaging</string>
+    <string name="label_delivery_timing">Delivery Timing</string>
+    <string name="label_value_for_money">Value for Money</string>
+    <string name="label_delivery_experience">Delivery Experience</string>
+    <string name="msg_payment_method_required">Please select a payment method to continue!</string>
+    <string name="action_add_photo">ADD PHOTO</string>
+    <string name="action_linkedin">LinkedIn</string>
+    <string name="message_no_result">No Results</string>
+    <string name="label_clear_search_history">Clear Search History</string>
+    <string name="label_share_using">Share</string>
+    <string name="dynamic_link_url_prefix" translatable="false">https://tmdoneclient.page.link</string>
+    <string name="shareContent" translatable="false">www.tmdone.com</string>
+    <string name="action_maybe_later">Maybe Later</string>
+
+    <string name="label_omr_credit">Share and get 2 OMR Credit after your friend’s first order, and 1 OMR Credit for them!</string>
+    <string name="action_share_code">Share Code</string>
+    <string name="title_refer_a_friend">Refer A Friend</string>
+    <string name="label_estimated_delivery_time">Estimated delivery time</string>
+    <string name="msg_address_delete_success">The address has been deleted.</string>
+    <string name="label_schedule_order">Your order is scheduled to be delivered on %1$s at %2$s.</string>
+    <string name="label_schedule_order_pickp">Your order is scheduled to be picked up on %1$s at %2$s.</string>
+    <string name="label_otp_sent_to_mobile">We\'ve sent you an OTP</string>
+    <string name="title_enter_otp_code">Enter OTP Code</string>
+    <string name="label_secs">%1$s Secs</string>
+    <string name="label_sec">Sec</string>
+    <string name="label_secs_with_minutes">%1$s Mins %2$s Secs</string>
+    <string name="msg_otp_expired">OTP Expired!</string>
+    <string name="label_declined_reason">Declined Reason :</string>
+    <string name="label_reference_id">Reference ID -</string>
+    <string name="label_year_decade" translatable="false">20</string>
+    <string name="title_tm_done_referral" translatable="false">TM DONE Referral</string>
+    <string name="msg_coppied">Copied!</string>
+    <string name="action_more_details">More Details</string>
+    <string name="msg_order_already_rated">Thank you for rating!</string>
+    <string name="label_backward_slash" translatable="false">/</string>
+    <string name="msg_cvv_number_invalid">Invalid CVV Number</string>
+    <string name="label_special_note">Special Note :</string>
+    <string name="label_special_note_no_dots">Special Note</string>
+    <string name="label_tmdone_plus" translatable="false">TM DONE PLUS</string>
+    <string name="label_fresh_and_fast" translatable="false">Fresh and fast!</string>
+    <string name="action_view_all">View All</string>
+
+    <string name="label_transaction_history">Transaction \n History</string>
+    <string name="label_terms_and_conditions">Terms and \n Conditions</string>
+    <string name="label_redeem_points">Redeem \n Points</string>
+    <string name="label_date_joined">Date Joined</string>
+    <string name="label_points_will_expire_on">Points will expire on</string>
+    <string name="title_redeem_points">Redeem Points</string>
+    <string name="action_redeem">Redeem</string>
+    <string name="label_conversion_rate">Conversion Rate:</string>
+    <string name="label_equal">=</string>
+
+    <string name="title_transaction_history">Transaction History</string>
+    <string name="label_transaction_date">HH:</string>
+    <string name="label_order_id_with_colon">Order ID:</string>
+    <string name="label_order_amount">Order Amount:</string>
+    <string name="label_value_1000">1000</string>
+    <string name="msg_sucessfuly_redeemed">Points Successfully Redeemed!</string>
+    <string name="label_no_transactions_yet">No transactions yet</string>
+    <string name="label_choose">Choose</string>
+    <string name="label_choose_upto">Choose up to</string>
+    <string name="msg_fill_in_details">Fill in details</string>
+    <string name="label_dob">DOB</string>
+    <string name="message_redeems_success">Your points have been redeemed successfully!</string>
+    <string name="action_dismiss">Dismiss</string>
+
+    <string-array name="credits_top_up_account_type_tab_titles">
+        <item>My Account</item>
+        <item>Other Account</item>
+    </string-array>
+
+
+    <!--    TM Done Chat Strings-->
+
+    <string name="default_notification_channel_id" translatable="false">Channel ID</string>
+    <string name="new_message_title">New Message Received from</string>
+    <string name="chat_hint">Type a message</string>
+
+    <string name="no_internet_message">No Internet Connection</string>
+    <string name="chat_title">Customer Care</string>
+    <string name="delivered">delivered</string>
+    <string name="message_hint">Type your message here…</string>
+    <string name="empty_message_error">Type your message !</string>
+    <string name="ok">Okay</string>
+    <string name="init_error">Initializing failed  !</string>
+    <string name="permissions_denied">Permission denied !</string>
+    <string name="image_error">Error image file !</string>
+    <string name="init_message_error">Init message sending failed !\nContact developers.</string>
+    <string name="start_your_conversation">Start your conversation !</string>
+    <string name="typing">Typing…</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+    <string name="chat_done_message">Thank you for joining with us !</string>
+    <string name="label_tm_done">TM DONE</string>
+    <string name="label_order_special_note">Order special note</string>
+    <string name="label_ooops">OOOPS!</string>
+    <string name="label_you_are_not_connected_to_the_internet">You are not connected to the \n internet, please try again!</string>
+    <string name="action_try_again">Try Again</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <!--  END OF   TM Done Chat Strings-->
+
+    <string name="msg_out_of_stock_for_requested_quantity">Requested quantity is not available for this product</string>
+    <string name="title_sorry">Sorry</string>
+    <string name="label_top_up_n_credit">Top Up \nCredit</string>
+    <string name="label_transfer_credit">Transfer \nCredit</string>
+    <string name="title_top_up_credit">Top Up Credit</string>
+    <string name="label_enter_amount">Enter Amount</string>
+    <string name="hint_zero_with_omr">0.000 OMR</string>
+    <string name="label_select_card">Select Card</string>
+    <string name="action_purchase">Purchase</string>
+    <string name="label_enter_mobile_number">Enter Mobile Number</string>
+    <string name="label_message">Message</string>
+    <string name="hint_write_your_message_here">Write your message here…</string>
+    <string name="msg_permission_need">Please Allow this Permission to Continue!</string>
+    <string name="msg_top_up_amount_required">Top Up Amount Required!</string>
+    <string name="action_transfer">Transfer</string>
+    <string name="label_optional_with_brackets">(Optional)</string>
+    <string name="title_payment_failed">Payment Failed!</string>
+    <string name="msg_payment_failed">Sorry, something went wrong. Please check your card details and try again.</string>
+    <string name="msg_tm_done_credits_purchase_success">TM DONE Credit has been added to your account successfully!</string>
+    <string name="action_top_up">Top Up</string>
+    <string name="title_insufficient_balance">Insufficient balance!</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_back">Back</string>
+    <string name="msg_tm_done_credit_transfer_success">TM DONE Credit has been transferred successfully!</string>
+    <string name="title_transfer_credit">Transfer Credit</string>
+    <string name="action_read_message">Read Message</string>
+    <string name="action_view_ticket">View Ticket</string>
+    <string name="label_row">Row</string>
+    <string name="label_category">Category</string>
+    <string name="label_gate">Gate</string>
+    <string name="label_match_date">Match Date</string>
+    <string name="label_ticket">Ticket  %1$d </string>
+    <string name="label_thanks_for_purchasing_from">Thanks for purchasing from</string>
+    <string name="msg_ticket_available">Opening Your Ticket!</string>
+    <string name="msg_donwloading_ticket">Downloading Your Ticket!</string>
+    <string name="msg_ticket_donwload_complete">Your Ticket is Ready Now!</string>
+    <string name="label_products">%1$s  Products</string>
+    <string name="label_no_results_match_with_your_request">No results match your request. Try \n another search?</string>
+    <string name="action_store">Store</string>
+    <string name="action_item">Item</string>
+    <string name="label_search_results">Search Results</string>
+    <string name="label_delivery">Delivery</string>
+    <string name="label_results">%1$s Results</string>
+    <string name="label_search_in">Search in</string>
+    <string name="action_sort_by"><u>Sort by</u></string>
+    <string name="action_plus_symbol" translatable="false">+</string>
+    <string name="action_minus_symbol" translatable="false">-</string>
+    <string name="label_shop_by_category">Shop By Category</string>
+    <string name="label_minimum">Minimum</string>
+    <string name="action_view_less">View Less</string>
+    <string name="hint_search_tmdone_plus">Search in TM Done Plus</string>
+    <string name="title_featured_products">Featured Products</string>
+    <string name="hint_add_a_notes">Add a note</string>
+    <string name="hint_noted">NOTED</string>
+    <string name="hint_promo_code">Promo code</string>
+    <string name="action_apply">Apply</string>
+    <string name="action_applied">Applied</string>
+    <string name="label_subtotal">Subtotal</string>
+    <string name="label_promo_code_upper_case">Promo Code</string>
+    <string name="hint_tmdone_plus">TM Done Plus</string>
+    <string name="label_all">All</string>
+    <string name="label_top_savers">Top Savers</string>
+    <string name="label_view_more"><ul>View More</ul></string>
+    <string name="title_my_cart">My Cart</string>
+    <string name="label_you_saved">You saved</string>
+    <string name="action_proceed_to_checkout">Proceed to Checkout</string>
+    <string name="label_new_product_on_store">New product on store</string>
+    <string name="label_percentage_mark" translatable="false">%</string>
+    <string name="label_details">Details:</string>
+    <string name="action_add_to_cart">Add To Cart</string>
+    <string name="label_search_history">Search History</string>
+    <string name="label_search_by">Search by</string>
+    <string name="label_similar_items_to_consider">Similar iItems to consider</string>
+    <string name="hint_zero" translatable="false">0.000</string>
+    <string name="no_result_found">Results not found</string>
+    <string name="label_please_hold_your_nfc_enabled_paycard_to_the_back_of_your_phone">Please hold your WiFi card to the back of your phone</string>
+    <string name="label_driver_is_waiting_at_restaurent">The driver is waiting at the restaurant to collect your order.</string>
+    <string name="label_driver_is_waiting_at_store">The driver is waiting at the store to collect your order.</string>
+    <string name="action_delete_profile">Delete Profile</string>
+    <string name="msg_confirm_delete_account">Are you sure you want to delete your\naccount?</string>
+    <string name="title_delete_account_with_question_mark">Delete Account?</string>
+    <string name="label_we_re_sorry_to_see_you_go">We’re sorry to see you go.</string>
+    <string name="label_confirm_delete_account">Are you sure you want to delete your\naccount?</string>
+    <string name="label_delete_account_warning">If you delete your account, you will\npermanently lose all the profile data.</string>
+    <string name="hint_tell_us_why_you_are_leaving">Tell Us Why you are Leaving?</string>
+    <string name="action_delete_account">Delete Account</string>
+    <string name="action_pickup">Pickup</string>
+    <string name="action_delivery">Delivery</string>
+    <string name="label_0_0" translatable="false">0.0</string>
+    <string name="label_pickup_location">Pickup Location</string>
+    <string name="title_checkout">Checkout </string>
+    <string name="label_pickup_time">Pickup Time</string>
+    <string name="label_store_location">Store Location</string>
+    <string name="action_navigate">Navigate</string>
+    <string name="label_preparation_time">Preparation Time</string>
+    <string name="label_distance_km">KM</string>
+    <string name="msg_gmap_not_installed">Google Maps Not Installed.Please install the App to Navigate</string>
+    <string name="label_order_is_ready_to_pickp">Your order is now ready to be picked up.</string>
+    <string name="msg_out_of_delivery_area_api_response" translatable="false">Sorry, We are not delivering to your location at the moment. we will be coming there soon.</string>
+    <string name="picker_am">AM</string>
+    <string name="picker_pm">PM</string>
+    <string name="picker_today">Today</string>
+
+    <string name="action_delete">Delete</string>
+    <string name="title_delete">Delete!</string>
+    <string name="label_two_dots" translatable="false">:</string>
+    <string name="navigation_home">Home</string>
+    <string name="navigation_get_a_ride">Get a Ride</string>
+    <string name="navigation_schedule_a_ride">Schedule a Ride</string>
+    <string name="navigation_saved_locations">Saved Locations</string>
+    <string name="navigation_vehicle_types">Our Vehicle Types</string>
+    <string name="navigation_previous_trips">Previous Trips</string>
+    <string name="label_taxi_home_title">Where do you want to go today?</string>
+    <string name="label_where_to_go">Where to?</string>
+    <string name="label_add_home">Add Home</string>
+    <string name="label_add_work">Add Work</string>
+    <string name="label_add_new_location">Add New Location</string>
+    <string name="label_address_details">Address Details</string>
+    <string name="hint_address_nick_name">Address Nickname</string>
+    <string name="hint_area">Area</string>
+    <string name="hint_way_no">Way No</string>
+    <string name="hint_building_number">Building Number</string>
+    <string name="hint_landmark">Landmark (Optional)</string>
+    <string name="hint_extra_directions_optional">Extra Directions (Optional)</string>
+    <string name="action_done_upper_first_letter">Done</string>
+    <string name="hint_search_your_location">Search your location</string>
+    <string name="title_previous_trips">Previous Trips</string>
+    <string-array name="previous_trips_tab_titles">
+        <item>Ongoing Trips</item>
+        <item>Completed Trips</item>
+    </string-array>
+    <string name="action_trip_details">Trip Details</string>
+    <string name="action_track_the_trip">Track the trip</string>
+    <string name="label_trip_summary">Trip Summary</string>
+    <string name="label_trip_payment">Trip Payment</string>
+    <string name="label_total_distance">Total Distance</string>
+    <string name="label_total_time">Total Time</string>
+    <string name="label_waiting_time">Waiting Time</string>
+    <string name="label_waiting_fee">Waiting Fee</string>
+    <string name="label_trip_fee">Trip Fee</string>
+    <string name="label_payment_method">Payment Method</string>
+    <string name="label_destination">Destination</string>
+    <string name="label_destination_with_colon">Destination:</string>
+    <string name="label_start">Start:</string>
+    <string name="label_star_without_colon">Start</string>
+    <string name="label_end">End:</string>
+    <string name="label_end_without_colon">End</string>
+    <string name="label_vehicle">Vehicle</string>
+    <string name="label_driver">Driver</string>
+    <string name="label_id">ID: %1$s</string>
+    <string name="label_km">%1$s KM</string>
+    <string name="label_currency">%1$s OMR</string>
+    <string name="label_trip_fare">Trip Fare</string>
+    <string name="label_delete_location_message">Are you sure want to delete  %1$s ?</string>
+    <string name="hint_fetching_location">Fetching Location</string>
+    <string name="label_later">Later</string>
+    <string name="action_confirm_ride_now">Confirm Ride Now</string>
+    <string name="label_recommended">Recommended</string>
+    <string name="label_minute">Min</string>
+    <string name="label_number_of_seat">No. of Seats</string>
+    <string name="label_estimated_rate">Estimated Rate</string>
+    <string name="action_schedule_the_ride">Schedule The Ride</string>
+    <string name="action_edit_first_letter_upper">Edit</string>
+    <string name="label_please_wait">Please wait</string>
+    <string name="label_for_the_driver_to_accept_your_request">for the driver to accept your request.</string>
     <string name="label_distance">Distance</string>
+    <string name="label_duration">Duration</string>
+    <string name="label_price">Price</string>
+    <string name="label_cancel_the_trip">Cancel Trip</string>
+    <string name="label_ongoing">Ongoing</string>
+    <string name="label_completed_trips_empty_placeholders_texts">You haven’t completed any trips yet.\nWant to book a ride now?</string>
+    <string name="action_start_a_new_trip">Book a Ride</string>
+    <string name="label_saved_locations">Saved Locations</string>
+    <string name="label_search_for_an_address">Search for an address</string>
+    <string name="label_set_on_map">Set location on map</string>
+    <string name="enter_destination">Enter Destination</string>
+    <string name="hint_add_a_stop">Add a stop</string>
+    <string name="label_current_location">Current Location</string>
+    <string name="label_thanks_for_choosing_tm_done">Thanks for choosing\nTM DONE!</string>
+    <string name="label_selected_payment_method">Selected Payment Method</string>
+    <string name="label_driver_not_found">No Vehicle Found</string>
+    <string name="label_vehicle_not_found_message">There are no drivers available in your area at the moment</string>
+    <string name="label_keep_looking">Keep Looking</string>
+    <string name="label_try_another_vehicle">Try Another Vehicle Type</string>
+    <string name="enter_a_new_address">Enter a new address</string>
+    <string name="set_location">Set Location</string>
+    <string name="errorTitle">Error</string>
+    <string name="label_you_have_arrived">You have arrived!</string>
+    <string name="label_schedule_taxi">Schedule Taxi</string>
+    <string name="label_your_vehicle_will_arrive_on_date_and_time_set_below_oman_time_zone">Your vehicle will arrive at the scheduled date and time below</string>
+    <string name="hint_time" translatable="false">00:00</string>
+    <string name="label_pickup_date">Pickup date</string>
+    <string name="hint_date">DD/MM/YYYY</string>
+
+    <string name="label_hi">Hi, %1$s</string>
+    <string name="label_how_was_trip">How was your trip?</string>
+    <string name="rate_driver">Rate Driver</string>
+    <string name="label_tell_us_why">Tell us why?</string>
+    <string name="label_schedule_ride">Schedule Ride</string>
+    <string name="label_select_payment_method">Select Payment Method</string>
+    <string name="action_add">Add</string>
+    <string name="text_select_your_team">Select Your Team</string>
+    <string name="text_which_team_are_you_supporting_with_question_mark">Which team are you supporting?</string>
+    <string name="title_trip_summary">Trip Summary</string>
+    <string name="action_schedule_a_trip">Schedule A Trip</string>
+    <string name="title_set_location">Set Location</string>
+    <string name="msg_select_a_pickup_location">Please enter the pickup location.</string>
+    <string name="label_kilometer">Km</string>
+    <string name="msg_distance_close_to_drop_location">Pickup location too close to the drop location !</string>
+    <string name="label_taxi_is_on_the_way">On the way!</string>
+    <string name="label_please_wait_for_your_driver">Your Taxi Driver is on his way to pick you up.</string>
+    <string name="label_driver_is_arrived">Driver has arrived!</string>
+    <string name="label_driver_is_here">Driver is here, Enjoy your ride..</string>
+    <string name="label_journey_started">Journey stared!.</string>
+    <string name="label_request_accepted">Request Accepted!</string>
+    <string name="label_is_on_way_to_location">%1$s is on his way to your location.</string>
+    <string name="label_proceed_to_checkout">Proceed to checkout</string>
+    <string name="label_passenger">Passenger</string>
+    <string name="title_saved_location">Saved Locations</string>
+    <string name="title_trip_details">Trip Details</string>
+    <string name="msg_invalid_time">Please select future time! </string>
+    <string name="msg_success_schedule_a_ride">Your trip has been scheduled successfully!</string>
+    <string name="msg_empty_rating_error_message">No ratings added !</string>
+    <string name="msg_rating_success">Successfully rated !</string>
+    <string name="msg_please_select_a_vehicle_for_ride">Please select a vehicle for ride</string>
+    <string name="msg_promo_code_applied">Promo Code Applied</string>
+    <string name="msg_promo_code_invalid">Invalid Promo Code.</string>
+    <string name="label_ongoing_trips_empty_placeholders_texts">Looks like you don’t have any booked trips at the moment.</string>
+    <string name="msg_location_successfully_updated">Location  successfully updated!</string>
+    <string name="title_add_new_location">Add New Location</string>
+    <string name="navigation_my_trips">My Trips</string>
+    <string name="label_hour">Hour</string>
+    <string name="msg_distance_less_than_default_distance">Please add a destination more than 200 meters. </string>
+    <string name="msg_hire_cancel_confirmation_title"> Are you sure you want to cancel the trip?</string>
+    <string name="action_now">Now</string>
+    <string name="label_schedule_trip">Schedule Trip</string>
+    <string name="label_select_date_time_schedule_trip_sub_title">Your Vehicle will arrive on date and time set below (Oman time zone)</string>
+    <string name="action_schedule">Schedule</string>
+    <string name="label_time">Time</string>
+    <string name="label_am">AM</string>
+    <string name="label_pm">PM</string>
+    <string name="hint_time_default_value" translatable="false">00</string>
+    <string name="label_colon" translatable="false">:</string>
+    <string name="label_where_to">Where To</string>
+    <string name="label_order_pickup">Pickup</string>
+    <string name="label_taxi_pickup">Pickup</string>
+    <string name="action_book_a_taxi">Book a Taxi</string>
+    <string name="label_select_a_vehicle">Select a Vehicle Type</string>
+    <string name="label_cash">Cash</string>
+    <string name="label_payment_default">Default Method</string>
+    <string name="hint_code_here">Code here</string>
+    <string name="label_drop_off_point_one">Destination 1 </string>
+    <string name="label_drop_off_point_two">Destination 2</string>
+    <string name="label_drop_off_point_three">Destination 3</string>
+    <string name="label_meet_at_the_pickup_point">Meet at the pickup point</string>
+    <string name="label_heading_to">Heading to Destination </string>
+    <string name="label_your_trip_has_started">Your trip has started!</string>
+    <string name="label_enjoy_your_ride">Enjoy the ride.</string>
+    <string name="label_h" translatable="false">H</string>
+    <string name="label_m" translatable="false">M</string>
+    <string name="title_cancel_request">Cancel Request!</string>
+    <string name="label_you_are_here">You\'re Here</string>
+    <string name="label_enter">Enter</string>
+    <string name="label_drop_location_to">Drop Location to</string>
+    <string name="label_estimate_fare">Estimate fare</string>
+
+    <string name="label_keyword_home">home</string>
+    <string name="label_keyword_house">house</string>
+    <string name="label_keyword_villa">villa</string>
+    <string name="label_keyword_residence">residence</string>
+    <string name="label_keyword_office">office</string>
+    <string name="label_keyword_workplace">workplace</string>
+    <string name="label_keyword_studio">studio</string>
+    <string name="label_keyword_headquarters">headquarters</string>
+    <string name="label_keyword_base">base</string>
+    <string name="label_heading_to_in_open_trip">Heading to</string>
+    <string name="label_you_are_currently_in_a_open_trip">You are currently in a Open Trip</string>
+    <string name="label_open_trip">Open Trip</string>
+    <string name="label_no_service_in_this_area">No service in this area</string>
+    <string name="label_enter_destination_later">Enter destination later</string>
+    <string name="label_enter_destination">Enter Destination</string>
+    <string name="label_arrival">Arrival</string>
+    <string name="message_hire_was_canceled">Hire was canceled…!</string>
+    <string name="message_the_ride_has_been_cancelled_with_exclamation_mark">The ride has been cancelled!</string>
+    <string name="label_rate_your_trip_with">Rate your trip with</string>
+    <string name="label_leave_a_comment">Add comments</string>
+    <string name="label_select_on_map">Select On Map</string>
+    <string name="action_add_promo_code">Add Promo Code</string>
+    <string name="label_canceled">Canceled</string>
+    <string name="action_cancel_the_trip">Cancel Trip</string>
+    <string name="hint_insert_your_code_here">Insert your code here</string>
+    <string name="label_base_fare">Base Fare</string>
+    <string name="label_trip_id">Trip ID</string>
+    <string name="label_paid_by">Paid By</string>
+    <string name="title_my_trips">My Trips</string>
+    <string name="label_date_and_time">Date and Time</string>
+    <string name="msg_thank_you_for_rating_your_trip">Thanks %1$s for rating your trip.</string>
+
+    <array name="material_calendar_months_array">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+    </array>
+
+    <string name="material_calendar_sunday">Sun</string>
+    <string name="material_calendar_monday">Mon</string>
+    <string name="material_calendar_tuesday">Tue</string>
+    <string name="material_calendar_wednesday">Wed</string>
+    <string name="material_calendar_thursday">Thu</string>
+    <string name="material_calendar_friday">Fri</string>
+    <string name="material_calendar_saturday">Sat</string>
+
+    <string name="label_thank_you">Thank you!</string>
+
+
+    <string name="label_order_from">Order From</string>
+    <string name="action_view_menu">View Menu</string>
+    <string name="action_view_store">View Store</string>
+
+    <string name="action_pay_online">Pay Online</string>
+    <string name="label_select_a_card">Select a Card</string>
+    <string name="label_add_new_card_with_plus">+ Add New Card</string>
+    <string name="action_pay_now">Pay Now</string>
+    <string name="msg_payment_successful">Payment Successful!</string>
+    <string name="label_enter_pickup_location">Enter Pickup Location</string>
+    <string name="destination_location_validation_message">Please enter the destination.</string>
+    <string name="label_zoom_out_warning">Please zoom in more to \n find your exact location.</string>
+    <string name="label_add_or_change">Add or Change</string>
+    <string name="action_update_location">Update Location</string>
+    <string name="title_update_location">Update Location</string>
+    <string name="title_set_drop_off_location">Change Destinations</string>
+    <string name="title_location_change_screen">Making changes may affect your trip fare</string>
+    <string name="label_location_change_screen">If you add a stop or change your destination, the total trip fare will be updated.</string>
+    <string name="label_your_price_has_changed">Your trip fare has been updated.</string>
+    <string name="label_based_on_your_new_destination">Based on your new destination, your trip fare will be</string>
+    <string name="msg_saved_address_delete_confirmation_taxi">Are you sure you want to delete this address?</string>
+    <string name="msg_you_have_chosen_same_drop_locations">You have selected the same destination twice</string>
+    <string name="msg_discover_the_store_operational_hours"><u>Discover the store\'s operational hours.</u></string>
+    <string name="label_order_type">Order Type:</string>
+    <string name="message_pickup_location_validation">Please enter the pickup location.</string>
+    <string name="label_change_destination">Change Destination</string>
+    <string name="label_schedule">Scheduled</string>
+
+
+    <string name="hint_new_email_here">Enter your email address here</string>
+    <string name="label_change_email_address">Change Email Address</string>
+    <string name="label_email">Current Email Address</string>
+    <string name="label_add_your_new_email">New Email Address</string>
+    <string name="action_change_your_email">Change Email Address</string>
+    <string name="label_change_email_mobile_number">Change Mobile Number</string>
+    <string name="hint_new_mobile_here">Enter your mobile number here </string>
+    <string name="label_mobile_number">Current Mobile Number</string>
+    <string name="label_add_your_new_mobile_number">New Mobile Number</string>
+    <string name="action_change_your_mobile_number">Confirm</string>
+    <string name="label_we_have_sent_the_otp_code_to_your_email_address">We have sent the OTP to your email address. </string>
+    <string name="label_we_have_sent_the_otp_code_to_your_mobile_number">We have sent the OTP to your mobile number.</string>
+    <string name="action_send_again"><u>Send Again</u></string>
+    <string name="msg_phone_number_successfully_changed">Mobile number has been successfully changed!</string>
+    <string name="msg_email_successfully_changed">Email address has been successfully changed!</string>
+    <string name="label_otp_expired">OTP Expired!</string>
+    <string name="msg_user_hame_changed_need_re_login">Your mobile number has been changed successfully. Please login again using your new mobile number.</string>
+    <string name="label_day">Day</string>
+    <string name="label_rate">Rate</string>
+    <string name="label_night">Night</string>
+    <string name="title_our_vehicle_types">Our Vehicle Types</string>
+    <string name="label_min_per_omr">OMR/Min</string>
+    <string name="label_kms_per_omr">OMR/KM</string>
+    <string name="label_to">To</string>
+    <string name="label_drop_off_with_colon">Drop Off :</string>
+    <string name="label_night_duration" translatable="false">8.00 AM To 8.00 PM</string>
+    <string name="msg_validate_driver_rating">Please rate first to add a review.</string>
+
+
+    <string name="msg_zoom_in_more">Please zoom in more to find your Exact delivery location</string>
+    <string name="action_confirm_pin_location">Confirm pin location</string>
+    <string name="label_sorry_we_are_not_delivering_to_this_location">Sorry we are not delivering to this location</string>
+    <string name="hint_search">Search…</string>
+    <string name="action_select">Select</string>
+
+    <string name="label_min_countdown_value">1</string>
+    <string name="name_action_order_now_with_exclamation_mark">Order Now!</string>
+    <string name="label_delivery_description_market_place_restaurant">Delivery time may vary and the live tracking is not available, as the delivery service is done by the restaurant.</string>
+    <string name="label_delivery_description_market_place_store">Delivery time may vary and the live tracking is not available, as the delivery service is done by the store.</string>
+
+    <string name="label_delivery_description_tm_done_delivery">Delivery service is done by TM DONE with live tracking.</string>
+    <string name="label_fifa_loyalty_points">Your TM DONE Loyalty Points:</string>
+    <string name="label_score_order_and_win">Score, Order &amp; WIN</string>
+    <string name="label_group">GROUP</string>
+    <string name="title_fifa_introduction">Time to Flip the Coin!!</string>
+    <string name="label_fifa_introduction">As the World Cup 2022 starts, you can now pick which country you support and think will WIN the 2022 World Cup.\n\nSelect your team now &amp; start ordering for a chance to WIN! 10 winners will be selected 😍 with the top 3 receiving FREE DELIVERY for A YEAR and the other 7 winners will receive 50 OMR TM DONE Credit.\n\n\Choose the winning team and make sure to order on TM DONE! The more you order, the more loyalty points you will gain &amp; so are your chances to WIN!\n\n\Pick wisely &amp; good luck!! 😁\n\nTerms and Conditions Apply:\n1. Winners will be picked after the final match of the 2022 World Cup.\n2. Only those who select the winning country of the 2022 World Cup final will enter the raffle draw.\n3. Once you select your team you cannot change it at a later date.\n4. If your team gets disqualified, you too will get disqualified from entering the raffle draw.\n5. Loyalty Points for the raffle will only be calculated from the day you pick your team, previous loyalty points will not be considered.\n6. Loyalty points will only be added for completed orders, not cancelled orders.\n7. If you have 0 Loyalty Points by the end of the 2022 World Cup you will not be eligible to enter the draw.\n8. Only Omani Citizens &amp; Residents are eligible to enter the draw.\n9. Free delivery will be provided for 3 orders per day for a period of a year from the date of winning.</string>
+    <string name="label_start_ordering_with_tmdone_now_to_quality">Start Ordering with ‘TM DONE’ Now to Qualify </string>
+    <string name="label_points">Points</string>
+    <string name="label_you_are_supporting">You are supporting</string>
+    <string name="label_team_out_message">Hey there! Sorry your team is out</string>
+    <string name="label_better_luck_next_time">Better luck next time!</string>
+    <string name="label_days">Days</string>
+    <string name="label_special_offer">Special Offers!</string>
+    <string name="ratings_continue_button">Continue</string>
+    <string name="how_was_your_order_with">How was your order with</string>
+    <string name="how_was_your_rider">How was your delivery\n rider experience?</string>
+    <string name="how_was_service">How was %1$s service?</string>
+    <string name="thanks_feedback">Thank you for your \nfeedback!"</string>
+    <string name="ratings_done_button">Done</string>
+    <string name="forgot_rate_order">Oops! You have forget to rate!</string>
+    <string name="any_more_comments">Any More Comments ?</string>
+    <string name="overall_ratings">Overall Ratings</string>
+    <string name="your_comments">Your comments...</string>
+    <string name="comment_length">%1$s/1000</string>
+    <string name="action_share_location">Share Location</string>
+    <string name="label_quick_reply">Quick Reply</string>
+    <string name="label_order_number">Order No</string>
+    <string name="label_notification_type_order_chat" translatable="false">ORDER_CHAT</string>
+    <string name="label_chat_with_driver_name">Chat with %1$s</string>
+    <string name="action_settings">Settings</string>
 </resources>
